@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found — Mauli Spa Kothrud Pune</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Mauli Spa — Best Ayurvedic Massage Therapy in Kothrud Pune. Karve Road, Happy Colony.">
+  <link rel="canonical" href="https://www.maulispa.com/">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@400;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root{--gold:#C8A96E;--gold2:#E8C98A;--green:#1A2E0A;--green2:#2D4A16;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{
+      font-family:'Jost',sans-serif;
+      background:var(--green);
+      color:#fff;
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      gap:28px;
+      padding:24px;
+      overflow:hidden;
+    }
+    body::before{
+      content:'';
+      position:fixed;
+      inset:0;
+      background:
+        radial-gradient(ellipse at 20% 50%,rgba(200,169,110,.08) 0%,transparent 60%),
+        radial-gradient(ellipse at 80% 20%,rgba(200,169,110,.06) 0%,transparent 50%);
+      pointer-events:none;
+    }
+    .logo-wrap{display:flex;flex-direction:column;align-items:center;gap:10px;animation:fadeDown .7s ease both;}
+    .logo-circle{width:72px;height:72px;border-radius:50%;border:2.5px solid var(--gold);overflow:hidden;box-shadow:0 0 32px rgba(200,169,110,.25);}
+    .logo-circle img{width:100%;height:100%;object-fit:cover;}
+    .logo-name{font-family:'Cormorant Upright',Georgia,serif;font-size:1.5rem;color:var(--gold);letter-spacing:.5px;}
+    .logo-tagline{font-size:.65rem;color:rgba(255,255,255,.4);letter-spacing:1.5px;text-transform:uppercase;}
+    .msg{text-align:center;animation:fadeUp .8s .2s ease both;}
+    .msg h1{font-family:'Cormorant Upright',Georgia,serif;font-size:clamp(1.6rem,5vw,2.4rem);color:#fff;margin-bottom:10px;line-height:1.2;}
+    .msg h1 em{color:var(--gold);font-style:italic;}
+    .msg p{font-size:.88rem;color:rgba(255,255,255,.55);max-width:360px;line-height:1.7;margin:0 auto;}
+    .spinner-wrap{display:flex;flex-direction:column;align-items:center;gap:14px;animation:fadeUp .8s .35s ease both;}
+    .spinner{width:44px;height:44px;border-radius:50%;border:3px solid rgba(200,169,110,.2);border-top-color:var(--gold);animation:spin .85s linear infinite;}
+    .spinner-label{font-size:.75rem;color:rgba(255,255,255,.4);letter-spacing:1.5px;text-transform:uppercase;}
+    .progress-bar-wrap{width:220px;height:3px;background:rgba(200,169,110,.15);border-radius:3px;overflow:hidden;animation:fadeUp .8s .4s ease both;}
+    .progress-bar{height:100%;width:0;background:linear-gradient(90deg,var(--gold),var(--gold2));border-radius:3px;animation:progressFill 2s ease forwards;}
+    .fallback{text-align:center;animation:fadeUp .8s .5s ease both;}
+    .fallback p{font-size:.78rem;color:rgba(255,255,255,.3);margin-bottom:10px;}
+    .btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--gold),#A07840);color:#0d1a03;font-family:'Jost',sans-serif;font-weight:600;font-size:.78rem;padding:10px 24px;border-radius:50px;text-decoration:none;letter-spacing:.4px;text-transform:uppercase;transition:all .25s;box-shadow:0 6px 24px rgba(200,169,110,.25);}
+    .btn:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(200,169,110,.35);}
+    @keyframes spin{to{transform:rotate(360deg);}}
+    @keyframes progressFill{0%{width:0;}60%{width:75%;}100%{width:100%;}}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+    @keyframes fadeDown{from{opacity:0;transform:translateY(-16px);}to{opacity:1;transform:translateY(0);}}
+  </style>
+
+  <script>
+    // Vercel pe vercel.json ka rewrite rule handle karta hai —
+    // yeh 404.html sirf tab aayega jab koi asset genuinely missing ho.
+    // Fir bhi safety ke liye home redirect add kar rahe hain.
+    setTimeout(function(){
+      window.location.replace('/');
+    }, 2000);
+  </script>
+</head>
+<body>
+
+  <div class="logo-wrap">
+    <div class="logo-circle">
+      <img src="/assets/home/logo/logo.webp" alt="Mauli Spa Logo"
+        onerror="this.parentNode.outerHTML='<div style=\'width:72px;height:72px;border-radius:50%;border:2.5px solid #C8A96E;background:#2D4A16;display:flex;align-items:center;justify-content:center;font-family:serif;font-size:1.6rem;color:#C8A96E;\'>M</div>'">
+    </div>
+    <span class="logo-name">Mauli Spa</span>
+    <span class="logo-tagline">Mauli Ayurvedic Massage Therapy</span>
+  </div>
+
+  <div class="msg">
+    <h1>Taking you to <em>wellness</em>...</h1>
+    <p>The page you looked for doesn't exist. Redirecting you to <strong>Mauli Spa Kothrud</strong> — best Ayurvedic massage center on Karve Road, Pune.</p>
+  </div>
+
+  <div class="spinner-wrap">
+    <div class="spinner"></div>
+    <span class="spinner-label">Redirecting</span>
+  </div>
+
+  <div class="progress-bar-wrap">
+    <div class="progress-bar"></div>
+  </div>
+
+  <div class="fallback">
+    <p>Not redirecting? Click below.</p>
+    <a class="btn" href="/">&#127807; Go to Mauli Spa Home</a>
+  </div>
+
+</body>
+</html>

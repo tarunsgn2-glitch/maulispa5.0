@@ -1,0 +1,65 @@
+/* ============================================================
+   MAULI SPA — SEO & CRAWLABILITY ADDITIONS
+   Sirf yeh section style.css ke BOTTOM mein add karo
+   ============================================================ */
+
+/* ── SEO intro paragraphs (home, therapies, membership pages) ── */
+.seo-intro {
+  font-size: .92rem;
+  line-height: 1.7;
+  color: var(--text2);
+  padding: 18px 5%;
+  background: var(--warm);
+}
+.seo-intro p { margin: 0; }
+.seo-intro a { color: var(--gold-dk); font-weight: 600; }
+
+/* ── Shop CTA strip (home page) ── */
+.shop-cta-strip {
+  padding: 16px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  background: var(--green2);
+}
+.shop-cta-strip p { margin: 0; }
+
+/* ── Blog page article cards ── */
+#page-blog .container > div[style*="grid"] article {
+  transition: transform .3s, box-shadow .3s;
+}
+#page-blog .container > div[style*="grid"] article:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0,0,0,.1);
+}
+
+/* ── Plan card calculator-selected state (already in style.css,
+       this ensures it works for blog/shop pages too) ── */
+#page-blog .sec-h2,
+#page-shop .sec-h2 {
+  color: var(--green);
+}
+
+/* ── Noscript therapy listing (visible only when JS off) ── */
+noscript div[style] h3 {
+  font-family: var(--fd);
+  color: var(--green);
+  margin-bottom: 6px;
+}
+noscript div[style] a {
+  color: var(--gold-dk);
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .shop-cta-strip {
+    flex-direction: column;
+    text-align: center;
+  }
+  .seo-intro {
+    padding: 14px 18px;
+    font-size: .86rem;
+  }
+}

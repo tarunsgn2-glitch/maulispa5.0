@@ -713,6 +713,7 @@ document.addEventListener('DOMContentLoaded',function(){
   initScrollEffects();
   updateCalc();
   hideTeamSkeletons();
+  syncBlogLang(localStorage.getItem('mauliLang')||'en'); // initial blog sync
 
   var fd=document.getElementById('fDate');
   if(fd) fd.min=new Date().toISOString().split('T')[0];
@@ -757,6 +758,51 @@ function setLang(lang){
   document.documentElement.lang=lang;
   applyTranslations();
   closeLangMenu();
+  renderTherapyCards();
+  renderLegal();
+  updateCalc();
+  syncBlogLang(lang); // ── Blog page language sync
+}
+
+/* ── BLOG LANGUAGE SYNC ──────────────────────────────────────
+   Called from setLang() so blog tabs stay in sync with
+   the site-wide language switcher in the header.
+   Also exposed as setBlogLang() for the in-page tab buttons.
+   ─────────────────────────────────────────────────────────── */
+function syncBlogLang(lang){
+  // Map site lang codes to blog div suffixes
+  var map = {en:'En', hi:'Hi', mr:'Mr'};
+  var suffix = map[lang] || 'En';
+
+  // Hide all language blocks
+  ['En','Hi','Mr'].forEach(function(l){
+    var el = document.getElementById('blog'+l);
+    if(el){ el.style.display='none'; }
+  });
+
+  // Show the correct block
+  var target = document.getElementById('blog'+suffix);
+  if(target){ target.style.display='grid'; }
+
+  // Update tab button styles
+  var tabs = {En:'blTabEn', Hi:'blTabHi', Mr:'blTabMr'};
+  Object.keys(tabs).forEach(function(l){
+    var btn = document.getElementById(tabs[l]);
+    if(!btn) return;
+    btn.className = (l===suffix) ? 'btn-gold btn-sm' : 'btn-outline btn-sm';
+  });
+}
+
+// setBlogLang is used by the in-page tab buttons (onclick="setBlogLang('hi')")
+function setBlogLang(lang){
+  syncBlogLang(lang);
+  // Also update site language so both stay in sync
+  currentLang = lang;
+  localStorage.setItem('mauliLang', lang);
+  var lbl = document.getElementById('langLabel');
+  if(lbl) lbl.textContent = LANG_LABELS[lang]||lang.toUpperCase();
+  document.documentElement.lang = lang;
+  applyTranslations();
   renderTherapyCards();
   renderLegal();
   updateCalc();
@@ -853,6 +899,9 @@ function navTo(page){
 
   // Trigger membership calculator on membership page
   if(page==='membership') updateCalc();
+
+  // Sync blog language when blog page is opened
+  if(page==='blog') syncBlogLang(currentLang);
 }
 
 /* ── POPSTATE — browser back/forward ────────────────────── */

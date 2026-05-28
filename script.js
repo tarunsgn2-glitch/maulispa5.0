@@ -124,7 +124,11 @@ const T = {
     thTilTel:"Til Tel Massage",thTilTelShort:"Traditional sesame warmth",
     thTilTelPrice:"₹1,499",thTilTelDur:"60 mins",
     thBackPain:"Back Pain Massage",thBackPainShort:"Instant back pain relief",
-    thBackPainPrice:"₹999",thBackPainDur:"30 mins"
+    thBackPainPrice:"₹999",thBackPainDur:"30 mins",
+    blogH1:"Massage Benefits & Health Tips — Ayurvedic Wellness Blog",
+    blogSub:"Shirodhara · Abhyang · Women Health · Sleep · Skin · Stress Relief | Kothrud Pune",
+    blogTitle:"Ayurvedic Massage Health Tips & Benefits — Kothrud Pune",
+    blogCTA:"Book Any Therapy at Mauli Spa Kothrud →"
   },
 
   hi:{
@@ -239,7 +243,11 @@ const T = {
     thTilTel:"तिल तेल मसाज",thTilTelShort:"पारंपरिक तिल तेल की गर्माहट",
     thTilTelPrice:"₹1,499",thTilTelDur:"60 मिनट",
     thBackPain:"पीठ दर्द मसाज",thBackPainShort:"पीठ दर्द से तुरंत राहत",
-    thBackPainPrice:"₹999",thBackPainDur:"30 मिनट"
+    thBackPainPrice:"₹999",thBackPainDur:"30 मिनट",
+    blogH1:"मसाज के फायदे और स्वास्थ्य टिप्स — आयुर्वेदिक वेलनेस ब्लॉग",
+    blogSub:"शिरोधारा · अभ्यंग · महिला स्वास्थ्य · नींद · त्वचा · तनाव राहत | कोथरूड पुणे",
+    blogTitle:"आयुर्वेदिक मसाज स्वास्थ्य टिप्स और फायदे — कोथरूड पुणे",
+    blogCTA:"Mauli Spa Kothrud में कोई भी थेरेपी बुक करें →"
   },
 
   mr:{
@@ -354,7 +362,11 @@ const T = {
     thTilTel:"तीळ तेल मसाज",thTilTelShort:"पारंपारिक तीळ तेलाची उष्णता",
     thTilTelPrice:"₹1,499",thTilTelDur:"60 मिनिटे",
     thBackPain:"पाठदुखी मसाज",thBackPainShort:"पाठदुखीपासून त्वरित आराम",
-    thBackPainPrice:"₹999",thBackPainDur:"30 मिनिटे"
+    thBackPainPrice:"₹999",thBackPainDur:"30 मिनिटे",
+    blogH1:"मसाजचे फायदे आणि आरोग्य टिप्स — आयुर्वेदिक वेलनेस ब्लॉग",
+    blogSub:"शिरोधारा · अभ्यंग · महिला आरोग्य · झोप · त्वचा · ताण निवारण | कोथरूड पुणे",
+    blogTitle:"आयुर्वेदिक मसाज आरोग्य टिप्स आणि फायदे — कोथरूड पुणे",
+    blogCTA:"Mauli Spa Kothrud मध्ये कोणतीही थेरपी बुक करा →"
   }
 };
 

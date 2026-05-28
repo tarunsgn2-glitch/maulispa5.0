@@ -1545,42 +1545,6 @@
     </div>
   </div>
 
-  <!-- Blog language switcher script -->
-  <script>
-  function setBlogLang(lang) {
-    // Hide all
-    ['En','Hi','Mr'].forEach(function(l){
-      var el = document.getElementById('blog'+l);
-      if(el) el.style.display = 'none';
-    });
-    // Show selected
-    var target = document.getElementById('blog'+lang.charAt(0).toUpperCase()+lang.slice(1));
-    if(target) target.style.display = 'grid';
-    // Update tab styles
-    document.getElementById('blTabEn').className = lang==='en' ? 'btn-gold btn-sm' : 'btn-outline btn-sm';
-    document.getElementById('blTabHi').className = lang==='hi' ? 'btn-gold btn-sm' : 'btn-outline btn-sm';
-    document.getElementById('blTabMr').className = lang==='mr' ? 'btn-gold btn-sm' : 'btn-outline btn-sm';
-  }
-  // Auto-sync with site language
-  document.addEventListener('DOMContentLoaded', function(){
-    var saved = localStorage.getItem('mauliLang') || 'en';
-    if(saved === 'hi') setBlogLang('hi');
-    else if(saved === 'mr') setBlogLang('mr');
-    else setBlogLang('en');
-  });
-  // Also sync when navTo('blog') is called
-  document.addEventListener('click', function(e){
-    if(e.target && e.target.closest && e.target.closest('[data-page="blog"]')){
-      setTimeout(function(){
-        var lang = localStorage.getItem('mauliLang') || 'en';
-        if(lang==='hi') setBlogLang('hi');
-        else if(lang==='mr') setBlogLang('mr');
-        else setBlogLang('en');
-      }, 100);
-    }
-  });
-  </script>
-
 </section>
 
 <!-- ═══════════════════════════════════════════════════════════════

@@ -761,52 +761,33 @@ function setLang(lang){
   renderTherapyCards();
   renderLegal();
   updateCalc();
-  syncBlogLang(lang); // ── Blog page language sync
+  syncBlogLang(lang);
 }
 
 /* ── BLOG LANGUAGE SYNC ──────────────────────────────────────
-   Called from setLang() so blog tabs stay in sync with
-   the site-wide language switcher in the header.
-   Also exposed as setBlogLang() for the in-page tab buttons.
+   syncBlogLang  → called ONLY by setLang() (header toggle)
+                   keeps blog in sync with rest of site
+   setBlogLang   → called by blog in-page tab buttons ONLY
+                   switches blog content, does NOT change site lang
    ─────────────────────────────────────────────────────────── */
 function syncBlogLang(lang){
-  // Map site lang codes to blog div suffixes
-  var map = {en:'En', hi:'Hi', mr:'Mr'};
-  var suffix = map[lang] || 'En';
-
-  // Hide all language blocks
+  var map={en:'En',hi:'Hi',mr:'Mr'};
+  var suffix=map[lang]||'En';
   ['En','Hi','Mr'].forEach(function(l){
-    var el = document.getElementById('blog'+l);
-    if(el){ el.style.display='none'; }
+    var el=document.getElementById('blog'+l);
+    if(el) el.style.display='none';
   });
-
-  // Show the correct block
-  var target = document.getElementById('blog'+suffix);
-  if(target){ target.style.display='grid'; }
-
-  // Update tab button styles
-  var tabs = {En:'blTabEn', Hi:'blTabHi', Mr:'blTabMr'};
-  Object.keys(tabs).forEach(function(l){
-    var btn = document.getElementById(tabs[l]);
-    if(!btn) return;
-    btn.className = (l===suffix) ? 'btn-gold btn-sm' : 'btn-outline btn-sm';
+  var target=document.getElementById('blog'+suffix);
+  if(target) target.style.display='grid';
+  var tabMap={En:'blTabEn',Hi:'blTabHi',Mr:'blTabMr'};
+  Object.keys(tabMap).forEach(function(l){
+    var btn=document.getElementById(tabMap[l]);
+    if(btn) btn.className=(l===suffix)?'btn-gold btn-sm':'btn-outline btn-sm';
   });
 }
 
-// setBlogLang is used by the in-page tab buttons (onclick="setBlogLang('hi')")
-function setBlogLang(lang){
-  syncBlogLang(lang);
-  // Also update site language so both stay in sync
-  currentLang = lang;
-  localStorage.setItem('mauliLang', lang);
-  var lbl = document.getElementById('langLabel');
-  if(lbl) lbl.textContent = LANG_LABELS[lang]||lang.toUpperCase();
-  document.documentElement.lang = lang;
-  applyTranslations();
-  renderTherapyCards();
-  renderLegal();
-  updateCalc();
-}
+// Blog in-page tabs — only switches blog content, does NOT change site language
+function setBlogLang(lang){ syncBlogLang(lang); }
 function toggleLangMenu(){var m=document.getElementById('langMenu');if(m)m.classList.toggle('open');}
 function closeLangMenu(){var m=document.getElementById('langMenu');if(m)m.classList.remove('open');}
 document.addEventListener('click',e=>{if(!e.target.closest('#langWrap'))closeLangMenu();});

@@ -36,6 +36,7 @@ const T = {
     ctaSub:"Talk to us and create your perfect therapy plan",ctaBook:"Book Session",
     navHome:"Home",navTherapies:"Wellness Therapies",navGallery:"Gallery",
     navMembership:"Wellness Membership",navAbout:"About",navContact:"Contact",navMore:"More",
+    navBlog:"Blog",navShop:"Shop",
     navTerms:"Terms & Conditions",navPrivacy:"Privacy Policy",
     offerTag:"LIMITED OFFER",offerTitle:"Free Facial for First 50 Membership Users!",
     offerDesc:"Join today + get 20% off your first session.",
@@ -160,6 +161,7 @@ const T = {
     ctaSub:"हमसे बात करें और अपना परफेक्ट थेरेपी प्लान बनाएं",ctaBook:"सत्र बुक करें",
     navHome:"होम",navTherapies:"वेलनेस थेरेपी",navGallery:"गैलरी",
     navMembership:"वेलनेस सदस्यता",navAbout:"हमारे बारे में",navContact:"संपर्क करें",navMore:"और",
+    navBlog:"ब्लॉग",navShop:"शॉप",
     navTerms:"नियम और शर्तें",navPrivacy:"गोपनीयता नीति",
     offerTag:"सीमित प्रस्ताव",offerTitle:"पहले 50 सदस्यों के लिए मुफ्त फेशियल!",
     offerDesc:"आज जॉइन करें + पहले सत्र पर 20% छूट पाएं।",
@@ -279,6 +281,7 @@ const T = {
     ctaSub:"आमच्याशी बोला आणि थेरपी प्लान बनवा",ctaBook:"सत्र बुक करा",
     navHome:"मुख्यपृष्ठ",navTherapies:"वेलनेस थेरपी",navGallery:"गॅलरी",
     navMembership:"वेलनेस सदस्यत्व",navAbout:"आमच्याबद्दल",navContact:"संपर्क करा",navMore:"अधिक",
+    navBlog:"ब्लॉग",navShop:"शॉप",
     navTerms:"अटी व शर्ती",navPrivacy:"गोपनीयता धोरण",
     offerTag:"मर्यादित ऑफर",offerTitle:"पहिल्या 50 सदस्यांसाठी मोफत फेशियल!",
     offerDesc:"आज जॉइन करा + 20% सूट.",
@@ -591,15 +594,7 @@ let lbImages=[], lbIdx=0;
 let tmCarouselIdx=0, tmCarouselEl=null, tmCarouselDots=[];
 let currentJobType='salaried';
 
-/* ── PAGE MAP — slug to section id ───────────────────────── */
-const PAGE_MAP={
-  '':'home','home':'home',
-  'therapies':'therapies','gallery':'gallery',
-  'membership':'membership','about':'about',
-  'contact':'contact','more':'more',
-  'blog':'blog','shop':'shop',
-  'terms':'terms','privacy':'privacy'
-};
+/* PAGE_MAP removed — multi-page site uses real HTML files */
 
 /* ── PLAN CONFIG ─────────────────────────────────────────── */
 const PLAN_CONFIG={
@@ -681,27 +676,16 @@ document.addEventListener('DOMContentLoaded',function(){
     if(loader){loader.style.opacity='0';setTimeout(()=>loader.style.display='none',400);}
   },600);
 
-  // ── CHANGED: Read page from URL path (not hash) ──
-  // Supports both /page/ and /#page formats for backward compat
-  var startPage='home';
-  var path=window.location.pathname.replace(/^\/|\/$/g,'').trim();
-  var hash=(window.location.hash||'').replace('#','').split('/')[0];
-  if(path && PAGE_MAP[path]) startPage=PAGE_MAP[path];
-  else if(hash && PAGE_MAP[hash]) startPage=PAGE_MAP[hash];
+  // Multi-page: each page loads its own HTML — just ensure active class is set
+  document.querySelectorAll('.page').forEach(p=>p.classList.add('active'));
 
-  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
-  var startEl=document.getElementById('page-'+startPage);
-  if(startEl) startEl.classList.add('active');
-  document.querySelectorAll('.nl').forEach(a=>a.classList.toggle('active',a.getAttribute('data-page')===startPage));
-
-  // Replace initial history state with /page/ URL format
-  if(window.history&&window.history.replaceState){
-    var initUrl=startPage==='home'?'/':'/'+startPage+'/';
-    window.history.replaceState({page:startPage},document.title,initUrl);
-  }
-
-  // Update meta for initial page
-  updatePageMeta(startPage);
+  // Set nav active based on current URL
+  var currentPath = window.location.pathname;
+  document.querySelectorAll('.nl[data-page]').forEach(function(a){
+    var page = a.getAttribute('data-page');
+    var url  = (PAGE_URLS && PAGE_URLS[page]) || '/';
+    a.classList.toggle('active', currentPath === url || (currentPath === '/' && page === 'home'));
+  });
 
   detectLang();
   initHero();
@@ -847,69 +831,54 @@ function initTop3VideoHover(){
   });
 }
 
-/* ── NAV — UPGRADED with pushState /page/ URLs ───────────── */
+/* ── NAV — Multi-page: window.location.href navigation ───── */
+var PAGE_URLS = {
+  home:       '/',
+  therapies:  '/therapies.html',
+  gallery:    '/gallery.html',
+  membership: '/membership.html',
+  about:      '/about.html',
+  contact:    '/contact.html',
+  more:       '/more.html',
+  blog:       '/blog.html',
+  shop:       'https://shop.maulispa.com/',
+  terms:      null, // popup only
+  privacy:    null, // popup only
+};
+
 function navTo(page){
-  // Legal pages open as popups, no URL change
+  // Legal pages open as popups only
   if(page==='terms'){openLegalPopup('terms');return;}
   if(page==='privacy'){openLegalPopup('privacy');return;}
 
-  // Hide all, show target
-  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
-  var el=document.getElementById('page-'+page);
-  if(el){el.classList.add('active');}
-  else{document.getElementById('page-home')?.classList.add('active');page='home';}
-
-  try{window.scrollTo({top:0,behavior:'smooth'});}catch(e){window.scrollTo(0,0);}
-
-  // ── CHANGED: pushState with /page/ URL (not #hash) ──
-  if(window.history&&window.history.pushState){
-    var pageUrl=page==='home'?'/':'/'+page+'/';
-    window.history.pushState({page:page},document.title,pageUrl);
-  }
-
-  // Update meta tags
-  updatePageMeta(page);
-
-  // Close mobile nav
+  // Close mobile nav first
   var nav=document.getElementById('mainNav');var hb=document.getElementById('hamburger');
   if(nav) nav.classList.remove('mobile-open');
   if(hb) hb.classList.remove('open');
 
-  // Update nav active state
-  document.querySelectorAll('.nl').forEach(a=>a.classList.toggle('active',a.getAttribute('data-page')===page));
+  // Navigate to the page URL
+  var url = PAGE_URLS[page];
+  if(!url) url = '/';
 
-  // Trigger membership calculator on membership page
-  if(page==='membership') updateCalc();
-
-  // Sync blog language when blog page is opened
-  if(page==='blog') syncBlogLang(currentLang);
-}
-
-/* ── POPSTATE — browser back/forward ────────────────────── */
-window.addEventListener('popstate',function(e){
-  var page='home';
-  // Read from state first, then URL path, then hash fallback
-  if(e.state&&e.state.page){
-    page=e.state.page;
-  } else {
-    var path=window.location.pathname.replace(/^\/|\/$/g,'').trim();
-    var hash=(window.location.hash||'').replace('#','').split('/')[0];
-    if(path&&PAGE_MAP[path]) page=PAGE_MAP[path];
-    else if(hash&&PAGE_MAP[hash]) page=PAGE_MAP[hash];
+  // External link (shop)
+  if(url.startsWith('http') && !url.includes('maulispa.com/')) {
+    window.open(url, '_blank');
+    return;
   }
 
-  // Show correct section
-  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
-  var el=document.getElementById('page-'+page);
-  if(el) el.classList.add('active');
-  try{window.scrollTo({top:0,behavior:'smooth'});}catch(ex){window.scrollTo(0,0);}
+  // Check if already on that page — if yes just scroll top
+  var currentPath = window.location.pathname;
+  var targetFile  = url === '/' ? '/' : url;
+  if(currentPath === targetFile || (currentPath === '/' && targetFile === '/')) {
+    try{window.scrollTo({top:0,behavior:'smooth'});}catch(e){window.scrollTo(0,0);}
+    return;
+  }
 
-  // Update nav + meta
-  document.querySelectorAll('.nl').forEach(a=>a.classList.toggle('active',a.getAttribute('data-page')===page));
-  updatePageMeta(page);
+  window.location.href = url;
+}
 
-  if(page==='membership') updateCalc();
-});
+/* ── POPSTATE — handled by browser natively for multi-page ── */
+// Browser back/forward works automatically with real HTML pages
 
 function setNavActive(el){document.querySelectorAll('.nl').forEach(a=>a.classList.remove('active'));if(el)el.classList.add('active');}
 function toggleMobileNav(){var nav=document.getElementById('mainNav');var hb=document.getElementById('hamburger');if(nav)nav.classList.toggle('mobile-open');if(hb)hb.classList.toggle('open');}

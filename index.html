@@ -46,7 +46,7 @@
   <title>Best Spa in Kothrud Pune | Ayurvedic Massage Center — Mauli Spa, Karve Road</title>
 
   <meta name="description"
-    content="Mauli Spa — Best spa in Kothrud Pune. Ayurvedic massage center on Karve Road near The Business Hub, Happy Colony. Deep Tissue, Potli, Couple Massage, Foot Massage, Head Massage & more. Certified therapists, pure herbal oils, 3 private cabins. Book now!">
+    content="Mauli Spa — Best spa in Kothrud Pune. Ayurvedic massage center on Karve Road. Deep Tissue, Potli, Couple, Foot & Head Massage. Certified therapists. Book now!">
 
   <meta name="keywords"
     content="spa in kothrud pune, best spa in kothrud, massage center in kothrud, body massage in kothrud, ayurvedic massage in kothrud pune, massage near karve road pune, body massage center near karve road, massage therapy in kothrud, full body massage near me, ayurvedic massage near me, best spa center near me, massage center near me open now, massage center near the business hub kothrud, body massage near happy colony kothrud, deep tissue massage in kothrud, potli massage center kothrud, foot massage center karve road, head massage in kothrud, neck pain massage kothrud, back pain relief massage kothrud, stress relief massage kothrud, ayurvedic oil massage kothrud, sesame oil massage pune, til tel body massage pune, cream massage in kothrud, aloe vera gel massage kothrud, massage price in kothrud, body massage cost in kothrud, book massage appointment kothrud, spa packages in kothrud, affordable spa in karve road, mauli spa kothrud, mauli ayurvedic massage therapy, mauli massage karve road, mauli spa happy colony, unisex spa in kothrud">
@@ -65,8 +65,8 @@
   <meta property="og:type"         content="website">
   <meta property="og:site_name"    content="Mauli Spa — Best Spa in Kothrud Pune">
   <meta property="og:url"          content="https://www.maulispa.com/">
-  <meta property="og:title"        content="Best Spa in Kothrud Pune | Ayurvedic Massage Center — Mauli Spa">
-  <meta property="og:description"  content="Pune ka sabse trusted Ayurvedic wellness center on Karve Road, Kothrud. Deep Tissue, Potli, Couple Massage, Foot & Head Massage. Private cabins, certified therapists, pure herbal oils. Book now!">
+  <meta property="og:title"        content="Best Spa in Kothrud Pune | Ayurvedic Massage Center — Mauli Spa, Karve Road">
+  <meta property="og:description"  content="Mauli Spa — Best spa in Kothrud Pune. Ayurvedic massage center on Karve Road. Deep Tissue, Potli, Couple, Foot & Head Massage. Certified therapists. Book now!">
   <meta property="og:image"        content="https://www.maulispa.com/assets/og/og-cover.webp">
   <meta property="og:image:width"  content="1200">
   <meta property="og:image:height" content="630">
@@ -288,37 +288,9 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="style_fixes.css">
 </head>
+
 <body>
 
-<!-- SITE SKELETON LOADER -->
-<div id="siteLoader" class="site-loader">
-  <div class="sl-inner">
-    <div class="sl-logo">
-      <div class="sl-circle skel-pulse"></div>
-      <div class="sl-lines">
-        <div class="sl-line skel-pulse" style="width:120px;height:14px;border-radius:6px"></div>
-        <div class="sl-line skel-pulse" style="width:80px;height:8px;border-radius:4px;margin-top:8px"></div>
-      </div>
-    </div>
-    <div class="sl-ring-wrap"><div class="sl-ring"></div></div>
-  </div>
-</div>
-
-<!-- OFFER POPUP -->
-<div id="offerPopup" class="offer-popup">
-  <div class="offer-popup-inner">
-    <div class="offer-star-badge"><i class="fas fa-star"></i></div>
-    <div class="offer-content">
-      <span class="offer-tag" data-i18n="offerTag">LIMITED OFFER</span>
-      <h3 data-i18n="offerTitle">Free Facial for First 50 Membership Users!</h3>
-      <p data-i18n="offerDesc">Join today + get 20% off your first session. Click to explore!</p>
-    </div>
-    <button class="offer-close-btn" id="offerCloseBtn" aria-label="Close"><i class="fas fa-times"></i></button>
-  </div>
-</div>
-<div class="offer-backdrop" id="offerBackdrop"></div>
-
-<!-- HEADER -->
 <header class="header" id="mainHeader">
   <div class="header-container">
     <!--
@@ -326,7 +298,7 @@
       event.preventDefault() so SPA behaviour is preserved, but Googlebot
       sees a real crawlable link.
     -->
-    <a class="logo-wrap" href="/" onclick="event.preventDefault();navTo('home')">
+    <a class="logo-wrap" href="/">
       <div class="logo-icon-wrap">
         <img src="assets/home/logo/logo.webp" alt="Mauli Spa Logo — Best Ayurvedic Massage Center Kothrud Pune" class="logo-img" id="logoImg">
       </div>
@@ -337,22 +309,15 @@
     </a>
 
     <nav class="main-nav" id="mainNav" aria-label="Main Navigation">
-      <!--
-        SEO FIX: All nav links now have real href="/page/" URLs.
-        JS navTo() intercepts via onclick — SPA behaviour unchanged.
-        Googlebot follows real href and can crawl all pages.
-      -->
-      <a href="/"            class="nl active" data-page="home"       onclick="event.preventDefault();navTo('home');setNavActive(this)"       data-i18n="navHome">Home</a>
-      <a href="/therapies/"  class="nl"         data-page="therapies"  onclick="event.preventDefault();navTo('therapies');setNavActive(this)"  data-i18n="navTherapies">Wellness Therapies</a>
-      <a href="/gallery/"    class="nl"         data-page="gallery"    onclick="event.preventDefault();navTo('gallery');setNavActive(this)"    data-i18n="navGallery">Gallery</a>
-      <a href="/membership/" class="nl"         data-page="membership" onclick="event.preventDefault();navTo('membership');setNavActive(this)" data-i18n="navMembership">Membership</a>
-      <a href="/about/"      class="nl"         data-page="about"      onclick="event.preventDefault();navTo('about');setNavActive(this)"      data-i18n="navAbout">About</a>
-      <a href="/contact/"    class="nl"         data-page="contact"    onclick="event.preventDefault();navTo('contact');setNavActive(this)"    data-i18n="navContact">Contact</a>
-      <a href="/more/"       class="nl"         data-page="more"       onclick="event.preventDefault();navTo('more');setNavActive(this)"       data-i18n="navMore">More</a>
-      <a href="/blog/"       class="nl"         data-page="blog"       onclick="event.preventDefault();navTo('blog');setNavActive(this)">Blog</a>
-      <!-- Shop: opens external shop subdomain — real href maintained -->
-      <a href="https://shop.maulispa.com/" class="nl" target="_blank" rel="noopener"
-         title="Buy Ayurvedic Massage Oil Online Pune — Herbal Wellness Products">Shop</a>
+      <a href="/" class="nl active" data-page="home" data-i18n="navHome">Home</a>
+      <a href="/therapies.html" class="nl" data-page="therapies" data-i18n="navTherapies">Wellness Therapies</a>
+      <a href="/gallery.html" class="nl" data-page="gallery" data-i18n="navGallery">Gallery</a>
+      <a href="/membership.html" class="nl" data-page="membership" data-i18n="navMembership">Membership</a>
+      <a href="/about.html" class="nl" data-page="about" data-i18n="navAbout">About</a>
+      <a href="/contact.html" class="nl" data-page="contact" data-i18n="navContact">Contact</a>
+      <a href="/more.html" class="nl" data-page="more" data-i18n="navMore">More</a>
+      <a href="/blog.html" class="nl" data-page="blog" data-i18n="navBlog">Blog</a>
+      <a href="https://shop.maulispa.com/" class="nl" target="_blank" rel="noopener" data-i18n="navShop">Shop</a>
     </nav>
 
     <div class="header-right">
@@ -381,14 +346,8 @@
   </div>
 </header>
 
-<main id="app">
 
-<!-- ═══════════════════════════════════════════════════════════════
-     HOME PAGE
-     Primary KW  : spa in kothrud pune
-     Supporting  : best spa in kothrud | massage center in kothrud |
-                   body massage in kothrud | massage near karve road pune
-═══════════════════════════════════════════════════════════════ -->
+<main id="app">
 <section id="page-home" class="page active"
   data-page-title="Best Spa in Kothrud Pune | Ayurvedic Massage Center — Mauli Spa, Karve Road"
   data-page-desc="Mauli Spa — Best spa in Kothrud Pune. Ayurvedic massage center on Karve Road. Deep Tissue, Potli, Couple, Foot & Head Massage. Certified therapists. Book now!"
@@ -411,7 +370,7 @@
       <h1 class="hero-h1"><span data-i18n="heroLine1">Best Spa in Kothrud Pune —</span><br><em data-i18n="heroLine2">Rejuvenate Soul &amp; Body</em></h1>
       <p class="hero-sub" data-i18n="heroSub">Ayurvedic massage center on Karve Road, Kothrud — complete wellness through ancient Ayurvedic wisdom</p>
       <div class="hero-ctas">
-        <button class="btn-gold" onclick="navTo('contact')" data-i18n="heroBook">Book Your Session</button>
+        <button class="btn-gold" onclick="window.location.href='/contact.html'" data-i18n="heroBook">Book Your Session</button>
         <a href="https://wa.me/c/919307360513" target="_blank" rel="noopener" class="btn-ghost" data-i18n="heroCatalogue">View E-Catalogue</a>
       </div>
     </div>
@@ -426,7 +385,7 @@
       We offer <strong>body massage in Kothrud</strong>, deep tissue massage, potli massage, foot massage, head massage,
       til tel (sesame oil) massage, couple massage and more — all with certified therapists, pure herbal oils and 3 private cabins.
       <strong>4.9 ★ Google rating</strong> · 5,000+ clients · Open 7 days 10 AM – 9 PM.
-      <a href="/contact/" onclick="event.preventDefault();navTo('contact')">Book a massage appointment in Kothrud →</a>
+      <a href="/contact.html" onclick="event.preventDefault();window.location.href='/contact.html'">Book a massage appointment in Kothrud →</a>
     </p>
   </div>
 
@@ -447,7 +406,7 @@
               <div class="top3-meta"><span class="t3-price" data-i18n="thDeepTissuePrice">₹2,199</span><span class="t3-dur"><i class="fas fa-clock"></i> <span data-i18n="thDeepTissueDur">70 mins</span></span></div>
             </div>
             <div class="top3-btns">
-              <button class="btn-gold btn-sm" onclick="navTo('contact')" data-i18n="bookNow">Book Now</button>
+              <button class="btn-gold btn-sm" onclick="window.location.href='/contact.html'" data-i18n="bookNow">Book Now</button>
               <button class="btn-ghost btn-sm" onclick="openTherapyModal(4)" data-i18n="seeMore">See More</button>
             </div>
           </div>
@@ -464,7 +423,7 @@
               <div class="top3-meta"><span class="t3-price" data-i18n="thTilTelPrice">₹1,499</span><span class="t3-dur"><i class="fas fa-clock"></i> <span data-i18n="thTilTelDur">60 mins</span></span></div>
             </div>
             <div class="top3-btns">
-              <button class="btn-gold btn-sm" onclick="navTo('contact')" data-i18n="bookNow">Book Now</button>
+              <button class="btn-gold btn-sm" onclick="window.location.href='/contact.html'" data-i18n="bookNow">Book Now</button>
               <button class="btn-ghost btn-sm" onclick="openTherapyModal(7)" data-i18n="seeMore">See More</button>
             </div>
           </div>
@@ -481,7 +440,7 @@
               <div class="top3-meta"><span class="t3-price" data-i18n="thBackPainPrice">₹999</span><span class="t3-dur"><i class="fas fa-clock"></i> <span data-i18n="thBackPainDur">30 mins</span></span></div>
             </div>
             <div class="top3-btns">
-              <button class="btn-gold btn-sm" onclick="navTo('contact')" data-i18n="bookNow">Book Now</button>
+              <button class="btn-gold btn-sm" onclick="window.location.href='/contact.html'" data-i18n="bookNow">Book Now</button>
               <button class="btn-ghost btn-sm" onclick="openTherapyModal(10)" data-i18n="seeMore">See More</button>
             </div>
           </div>
@@ -489,7 +448,7 @@
 
       </div>
       <div class="see-all-wrap">
-        <a href="/therapies/" class="btn-outline" onclick="event.preventDefault();navTo('therapies')" data-i18n="seeAllTherapies">
+        <a href="/therapies.html" class="btn-outline" onclick="event.preventDefault();window.location.href='/therapies.html'" data-i18n="seeAllTherapies">
           See All Ayurvedic Massage Therapies in Kothrud →
         </a>
       </div>
@@ -570,7 +529,7 @@
       <div class="cta-banner-inner">
         <div class="cta-text"><h2 data-i18n="ctaTitle">Book Massage Appointment Kothrud Today</h2><p data-i18n="ctaSub">Talk to us and create your perfect therapy plan — spa near Karve Road, open 7 days</p></div>
         <div class="cta-btns">
-          <button class="btn-dark" onclick="navTo('contact')" data-i18n="ctaBook">Book Session</button>
+          <button class="btn-dark" onclick="window.location.href='/contact.html'" data-i18n="ctaBook">Book Session</button>
           <a href="tel:9156972622" class="btn-dark"><i class="fas fa-phone"></i> Call Now</a>
         </div>
       </div>
@@ -585,1038 +544,9 @@
                    potli massage kothrud | foot massage karve road |
                    head massage kothrud | til oil massage pune
 ═══════════════════════════════════════════════════════════════ -->
-<section id="page-therapies" class="page"
-  data-page-title="Ayurvedic Massage in Kothrud Pune — Full Body, Deep Tissue, Potli, Foot, Head Massage | Mauli Spa"
-  data-page-desc="All Ayurvedic massage therapies in Kothrud Pune. Deep tissue massage, potli massage, foot massage Karve Road, head massage, til oil massage, couple massage & more. Book now!"
-  data-page-url="/therapies/"
-  aria-label="Ayurvedic Massage Therapies Kothrud Pune">
-
-  <div class="page-banner" style="background-image:url('assets/therapies/therapybanner.webp')">
-    <div class="pb-overlay"></div>
-    <div class="pb-content">
-      <h1 data-i18n="therapiesH1">Ayurvedic Massage Therapies in Kothrud Pune</h1>
-      <p data-i18n="therapiesSub">Full body massage, deep tissue, potli, foot massage, head massage &amp; more — Karve Road, Kothrud</p>
-    </div>
-  </div>
-
-  <!-- Hidden SEO paragraph for therapies page — fully crawlable -->
-  <div style="padding:18px 5%;background:var(--bg-light,#f9f7f2);font-size:0.88rem;line-height:1.7;color:var(--text2,#555);">
-    <p>
-      Mauli Spa offers the widest range of <strong>Ayurvedic massage in Kothrud Pune</strong> — from
-      <strong>deep tissue massage Kothrud</strong> (₹2,199) for muscle and back pain relief, to
-      <strong>potli massage Kothrud</strong> (₹2,999) for joint pain, <strong>foot massage Karve Road</strong> (₹499),
-      <strong>head massage Kothrud</strong> (₹499) for stress and sleep, <strong>til oil sesame massage Pune</strong> (₹1,499),
-      couple massage, aloe vera gel massage, cream massage, medicinal oil massage and full body spa pack (₹3,999).
-      All therapies performed by certified therapists with 100% natural Ayurvedic oils.
-    </p>
-  </div>
-
-  <div class="container" style="padding:60px 20px">
-    <div class="sec-badge" data-i18n="therapiesBadge">All Services</div>
-    <h2 class="sec-h2" data-i18n="therapiesTitle">Our Ayurvedic Wellness Therapies — Kothrud, Karve Road Pune</h2>
-
-    <!-- Static therapy listing for Googlebot (always visible, no JS needed) -->
-    <noscript>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-bottom:40px;">
-        <div style="border:1px solid #ddd;padding:20px;border-radius:8px;"><h3>Deep Tissue Massage Kothrud — ₹2,199</h3><p>Targeted deep pressure for chronic muscle tension and back pain relief. 70 mins. Best massage for neck pain, back pain, muscle pain in Kothrud Pune.</p><a href="/contact/">Book Now</a></div>
-        <div style="border:1px solid #ddd;padding:20px;border-radius:8px;"><h3>Potli Massage Kothrud — ₹2,999</h3><p>Ayurvedic potli massage in Kothrud — herbal bolus therapy for joint pain, body pain relief and deep relaxation. 90 mins.</p><a href="/contact/">Book Now</a></div>
-        <div style="border:1px solid #ddd;padding:20px;border-radius:8px;"><h3>Couple Massage Kothrud — ₹2,699</h3><p>Couple massage in Kothrud with private cabin — relaxing full body Ayurvedic massage for two. 60 mins.</p><a href="/contact/">Book Now</a></div>
-        <div style="border:1px solid #ddd;padding:20px;border-radius:8px;"><h3>Medicinal Oil Massage Kothrud — ₹2,499</h3><p>Medicated herbal oil massage — customized Ayurvedic treatment for pain, stiffness and wellness. 75 mins.</p><a href="/contact/">Book Now</a></div>
-        <div style="border:1px solid #ddd;padding:20px;border-radius:8px;"><h3>Aloe Vera Gel Massage Kothrud — ₹1,999</h3><p>Aloe vera gel massage in Kothrud for skin glow, hydration and stress relief. 60 mins.</p><a href="/contact/">Book Now</a></div>
-        <div style="border:1px solid #ddd;padding:20px;border-radius:8px;"><h3>Cream Massage Kothrud — ₹1,799</h3><p>Cream massage in Kothrud Pune for soft skin, relaxation and body nourishment. 60 mins.</p><a href="/contact/">Book Now</a></div>
-        <div style="border:1px solid #ddd;padding:20px;border-radius:8px;"><h3>Til Tel (Sesame Oil) Massage Pune — ₹1,499</h3><p>Traditional sesame oil til tel body massage in Kothrud — Ayurvedic warmth therapy. 60 mins. Best ayurvedic oil massage Pune.</p><a href="/contact/">Book Now</a></div>
-        <div style="border:1px solid #ddd;padding:20px;border-radius:8px;"><h3>Powder Massage Kothrud — ₹1,299</h3><p>Ayurvedic powder (Udwarthanam) massage in Kothrud for weight management and skin rejuvenation. 45 mins.</p><a href="/contact/">Book Now</a></div>
-        <div style="border:1px solid #ddd;padding:20px;border-radius:8px;"><h3>Ayurvedic Facial Kothrud — ₹999</h3><p>Ayurvedic facial in Kothrud for natural skin glow, anti-aging and deep cleansing. 45 mins.</p><a href="/contact/">Book Now</a></div>
-        <div style="border:1px solid #ddd;padding:20px;border-radius:8px;"><h3>Back Pain Massage Kothrud — ₹999</h3><p>Best massage for back pain in Kothrud — targeted relief for lower back, spine and shoulder pain. 30 mins. Back pain relief massage Kothrud.</p><a href="/contact/">Book Now</a></div>
-        <div style="border:1px solid #ddd;padding:20px;border-radius:8px;"><h3>Leg Pain Massage Kothrud — ₹999</h3><p>Leg pain massage in Kothrud for muscle soreness, varicose relief and fatigue. 30 mins.</p><a href="/contact/">Book Now</a></div>
-        <div style="border:1px solid #ddd;padding:20px;border-radius:8px;"><h3>Foot Massage Karve Road Kothrud — ₹499</h3><p>Foot massage in Kothrud — foot reflexology near Karve Road Pune for tired legs and stress relief. 30 mins.</p><a href="/contact/">Book Now</a></div>
-        <div style="border:1px solid #ddd;padding:20px;border-radius:8px;"><h3>Head Massage Kothrud — ₹499</h3><p>Head massage in Kothrud for stress relief, better sleep and relaxation. 20 mins. Stress relief head massage Karve Road.</p><a href="/contact/">Book Now</a></div>
-        <div style="border:1px solid #ddd;padding:20px;border-radius:8px;"><h3>Spa Pack Kothrud — ₹3,999</h3><p>Full Ayurvedic spa pack in Kothrud — includes full body massage, facial, potli therapy and more. 120 mins. Best spa experience Kothrud.</p><a href="/contact/">Book Now</a></div>
-      </div>
-    </noscript>
-
-    <div class="therapies-skel-grid" id="therapiesSkeletonGrid">
-      <div class="tc-skel skel-pulse"></div><div class="tc-skel skel-pulse"></div><div class="tc-skel skel-pulse"></div>
-      <div class="tc-skel skel-pulse"></div><div class="tc-skel skel-pulse"></div><div class="tc-skel skel-pulse"></div>
-    </div>
-    <div class="therapies-grid" id="therapiesGrid" style="display:none"></div>
-  </div>
-
-  <div class="hygiene-strip">
-    <div class="container"><div class="hygiene-grid">
-      <div class="hy-item"><i class="fas fa-user-md"></i><h4 data-i18n="hygCertified">Certified Therapists</h4><p data-i18n="hygCertifiedP">Professional and certified team — authentic ayurvedic massage kothrud</p></div>
-      <div class="hy-item"><i class="fas fa-leaf"></i><h4 data-i18n="hygNatural">Pure Natural Oils</h4><p data-i18n="hygNaturalP">100% natural herbal ayurvedic oils used</p></div>
-      <div class="hy-item"><i class="fas fa-broom"></i><h4 data-i18n="hygDisposable">Disposable Sheets</h4><p data-i18n="hygDisposableP">Fresh sheets every session — hygienic spa kothrud</p></div>
-      <div class="hy-item"><i class="fas fa-spray-can"></i><h4 data-i18n="hygSanitized">Sanitized Rooms</h4><p data-i18n="hygSanitizedP">Deep sanitized after every client</p></div>
-    </div></div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════════════════
-     GALLERY PAGE
-     Primary KW  : spa gallery in kothrud
-     Supporting  : hygienic spa in kothrud | professional massage center kothrud |
-                   ayurvedic therapy room kothrud | best massage experience kothrud
-═══════════════════════════════════════════════════════════════ -->
-<section id="page-gallery" class="page"
-  data-page-title="Spa Gallery in Kothrud — Hygienic Massage Center, Private Cabins | Mauli Spa Pune"
-  data-page-desc="Gallery of Mauli Spa — hygienic spa in Kothrud, professional massage center, Ayurvedic therapy rooms, 3 private cabins. Best massage experience in Kothrud Pune."
-  data-page-url="/gallery/"
-  aria-label="Spa Gallery — Hygienic Massage Center Kothrud">
-
-  <div class="page-banner" style="background-image:url('assets/gallery/gallerybanner.webp')">
-    <div class="pb-overlay"></div>
-    <div class="pb-content">
-      <h1 data-i18n="galleryH1">Spa Gallery — Hygienic Massage Center Kothrud</h1>
-      <p data-i18n="gallerySub">Professional Ayurvedic therapy rooms, 3 private cabins — best massage experience in Kothrud Pune</p>
-    </div>
-  </div>
-
-  <div class="container" style="padding:60px 20px">
-    <div class="social-section-header" data-i18n="followUs">Follow Us On Social Media — Mauli Spa Kothrud</div>
-    <div class="social-strip">
-      <a href="https://instagram.com/maulispa" target="_blank" rel="noopener" class="soc-btn instagram" aria-label="Mauli Spa Instagram"><i class="fab fa-instagram"></i> Instagram</a>
-      <a href="https://facebook.com/@maulispa" target="_blank" rel="noopener" class="soc-btn facebook" aria-label="Mauli Spa Facebook"><i class="fab fa-facebook"></i> Facebook</a>
-      <a href="https://youtube.com/@maulispa" target="_blank" rel="noopener" class="soc-btn youtube" aria-label="Mauli Spa YouTube"><i class="fab fa-youtube"></i> YouTube</a>
-      <a href="https://wa.me/919307360513" target="_blank" rel="noopener" class="soc-btn whatsapp" aria-label="Mauli Spa WhatsApp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-      <a href="https://share.google/SUFFG6sbTxTEp1xLA" target="_blank" rel="noopener" class="soc-btn gmaps" aria-label="Mauli Spa Google Maps"><i class="fas fa-map-marker-alt"></i> Google Maps</a>
-    </div>
-
-    <div class="virtual-tour-wrap">
-      <h3 class="sec-h2" data-i18n="virtualTour">Virtual Tour — Mauli Spa Kothrud Pune</h3>
-      <div class="vt-video">
-        <video autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;">
-          <source src="assets/gallery/internaltour.mp4" type="video/mp4">
-        </video>
-        <div class="vt-label"><i class="fas fa-play-circle"></i> <span data-i18n="virtualTourLabel">Mauli Spa — Virtual Tour, Karve Road Kothrud</span></div>
-      </div>
-    </div>
-
-    <h3 class="sec-h2" style="margin-bottom:30px;" data-i18n="photoGallery">Photo Gallery — Hygienic Spa Kothrud</h3>
-    <div class="gallery-skel-grid" id="gallerySkeletonGrid">
-      <div class="mg-skel skel-pulse"></div><div class="mg-skel skel-pulse" style="height:180px"></div>
-      <div class="mg-skel skel-pulse" style="height:220px"></div><div class="mg-skel skel-pulse" style="height:200px"></div>
-      <div class="mg-skel skel-pulse"></div><div class="mg-skel skel-pulse" style="height:190px"></div>
-      <div class="mg-skel skel-pulse" style="height:210px"></div><div class="mg-skel skel-pulse"></div>
-    </div>
-    <div class="masonry-grid" id="masonryGrid" style="display:none"></div>
-  </div>
-
-  <div class="lightbox" id="lightbox">
-    <button class="lb-close" onclick="closeLightbox()"><i class="fas fa-times"></i></button>
-    <button class="lb-prev" onclick="lbNav(-1)"><i class="fas fa-chevron-left"></i></button>
-    <img id="lbImg" src="" alt="Mauli Spa Kothrud — Ayurvedic massage therapy room">
-    <button class="lb-next" onclick="lbNav(1)"><i class="fas fa-chevron-right"></i></button>
-    <div class="lb-counter" id="lbCounter"></div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════════════════
-     MEMBERSHIP PAGE
-     Primary KW  : spa membership packages kothrud
-     Supporting  : massage packages kothrud | body massage offers kothrud |
-                   affordable spa packages karve road | monthly massage membership pune
-═══════════════════════════════════════════════════════════════ -->
-<section id="page-membership" class="page"
-  data-page-title="Spa Membership Packages Kothrud — Monthly Massage Membership Pune | Mauli Spa"
-  data-page-desc="Spa membership packages in Kothrud Pune. Silver, Gold, Platinum monthly massage membership. Affordable body massage offers on Karve Road. Save up to 25% per session."
-  data-page-url="/membership/"
-  aria-label="Spa Membership Packages Kothrud Pune">
-
-  <div class="page-banner" style="background-image:url('assets/membership/membership.webp')">
-    <div class="pb-overlay"></div>
-    <div class="pb-content">
-      <h1 data-i18n="memberH1">Spa Membership Packages Kothrud</h1>
-      <p data-i18n="memberSub">Monthly massage membership Pune — affordable body massage offers on Karve Road. Stop paying every time, make wellness your lifestyle.</p>
-    </div>
-  </div>
-
-  <div class="container" style="padding:60px 20px">
-    <div class="limited-offer-banner">
-      <span class="pulse-dot"></span>
-      <strong data-i18n="limitedOffer">LIMITED OFFER:</strong>&nbsp;<span data-i18n="limitedOfferDesc">First 50 members get a FREE Facial upon joining!</span>
-    </div>
-
-    <!-- Hidden SEO text for membership page -->
-    <p style="font-size:0.88rem;color:var(--text2,#555);line-height:1.7;margin-bottom:24px;">
-      <strong>Spa membership packages in Kothrud Pune</strong> — Mauli Spa offers Silver (1 session/mo, 5% off),
-      Gold (2 sessions/mo, 15% off) and Platinum (4 sessions/mo, 25% off) <strong>monthly massage membership</strong>.
-      Best <strong>affordable spa packages on Karve Road</strong>. Save up to ₹20,000+ annually on
-      <strong>body massage offers Kothrud</strong>.
-    </p>
-
-    <!-- SMART SAVINGS CALCULATOR -->
-    <div class="savings-calc">
-      <h3 data-i18n="savingsCalc">Smart Savings Calculator — Massage Packages Kothrud</h3>
-      <p class="calc-sub" data-i18n="calcSubtitle">Choose your massage &amp; membership plan to see exact savings</p>
-      <div class="calc-selectors">
-        <div class="calc-sel-wrap">
-          <label data-i18n="calcChooseTherapy">Select Therapy (₹1,499+)</label>
-          <select id="calcTherapy" onchange="updateCalc()">
-            <option value="1499">Til Tel Massage — ₹1,499</option>
-            <option value="1799">Cream Massage — ₹1,799</option>
-            <option value="1999">Aloe Vera Gel Massage — ₹1,999</option>
-            <option value="2199" selected>Deep Tissue Massage — ₹2,199</option>
-            <option value="2499">Medicinal Oil Massage — ₹2,499</option>
-            <option value="2699">Couple Massage — ₹2,699</option>
-            <option value="2999">Potli Massage — ₹2,999</option>
-            <option value="3999">Spa Pack — ₹3,999</option>
-          </select>
-        </div>
-        <div class="calc-sel-wrap">
-          <label data-i18n="calcChoosePlan">Select Membership Plan</label>
-          <select id="calcPlan" onchange="updateCalc()">
-            <option value="silver">Silver (1 session/mo · 5% off)</option>
-            <option value="gold" selected>Gold (2 sessions/mo · 15% off)</option>
-            <option value="platinum">Platinum (4 sessions/mo · 25% off)</option>
-          </select>
-        </div>
-      </div>
-      <div class="sc-inner">
-        <div class="sc-box red">
-          <span data-i18n="normalPrice">Normal Price</span>
-          <strong id="calcNormalPrice">₹2,199/session</strong>
-          <small id="calcNormalAnnual" style="display:block;font-size:.75rem;color:var(--text3);margin-top:3px">₹52,776/year (24 sessions)</small>
-        </div>
-        <div class="sc-arrow">→</div>
-        <div class="sc-box green">
-          <span id="calcMemberLabel">Gold Member</span>
-          <strong id="calcMemberPrice">₹1,868/session</strong>
-          <small id="calcMemberAnnual" style="display:block;font-size:.75rem;color:#2D7A3A;margin-top:3px">₹44,832/year</small>
-        </div>
-        <div class="sc-box highlight">
-          <span data-i18n="annualSaving">Annual Saving</span>
-          <strong id="calcAnnualSaving">₹7,944</strong>
-          <small id="calcDiscountPct" style="display:block;font-size:.75rem;color:rgba(255,255,255,.7);margin-top:3px">15% off per session</small>
-        </div>
-      </div>
-    </div>
-
-    <div class="plans-grid">
-      <div class="plan-card" id="planSilverCard">
-        <div class="plan-header">
-          <h3 data-i18n="planSilver">Silver Membership — Kothrud</h3>
-          <div class="plan-price">Ayurvedic Therapy<span>/mo</span></div>
-        </div>
-        <ul class="plan-feats">
-          <li><i class="fas fa-check"></i> <span data-i18n="silver1">1 Session / month</span></li>
-          <li><i class="fas fa-check"></i> <span data-i18n="silver2">5% Off extra sessions</span></li>
-          <li class="no"><i class="fas fa-times"></i> <span data-i18n="silver3">Guest Pass</span></li>
-          <li class="no"><i class="fas fa-times"></i> <span data-i18n="silver4">Priority Support</span></li>
-          <li class="no"><i class="fas fa-times"></i> <span data-i18n="silver5">Extended Duration</span></li>
-        </ul>
-        <button class="btn-outline" onclick="navTo('contact')" data-i18n="joinSilver">Join Silver</button>
-      </div>
-      <div class="plan-card bestseller" id="planGoldCard">
-        <div class="plan-badge">⭐ <span data-i18n="bestSeller">Best Seller</span></div>
-        <div class="plan-header">
-          <h3 data-i18n="planGold">Gold Membership — Best Value Kothrud</h3>
-          <div class="plan-price">Ayurvedic Therapy<span>/mo</span></div>
-        </div>
-        <ul class="plan-feats">
-          <li><i class="fas fa-check"></i> <span data-i18n="gold1">2 Sessions / month</span></li>
-          <li><i class="fas fa-check"></i> <span data-i18n="gold2">15% Off extra sessions</span></li>
-          <li><i class="fas fa-check"></i> <span data-i18n="gold3">1 Guest Pass / month</span></li>
-          <li><i class="fas fa-check"></i> <span data-i18n="gold4">Priority Support</span></li>
-          <li><i class="fas fa-check"></i> <span data-i18n="gold5">30 days validity</span></li>
-        </ul>
-        <button class="btn-gold" onclick="navTo('contact')" data-i18n="joinGold">Join Gold</button>
-      </div>
-      <div class="plan-card platinum" id="planPlatCard">
-        <div class="plan-header">
-          <h3 data-i18n="planPlatinum">Platinum Membership — Kothrud</h3>
-          <div class="plan-price">Ayurvedic Therapy<span>/mo</span></div>
-        </div>
-        <ul class="plan-feats">
-          <li><i class="fas fa-check"></i> <span data-i18n="plat1">4 Sessions / month</span></li>
-          <li><i class="fas fa-check"></i> <span data-i18n="plat2">25% Off extra sessions</span></li>
-          <li><i class="fas fa-check"></i> <span data-i18n="plat3">2 Guest Pass / month</span></li>
-          <li><i class="fas fa-check"></i> <span data-i18n="plat4">Priority Support</span></li>
-          <li><i class="fas fa-check"></i> <span data-i18n="plat5">5+30 days validity</span></li>
-        </ul>
-        <button class="btn-outline" onclick="navTo('contact')" data-i18n="joinPlatinum">Join Platinum</button>
-      </div>
-    </div>
-
-    <div style="margin-top:60px">
-      <h3 class="sec-h2" data-i18n="memberTestTitle">Happy Members — Mauli Spa Kothrud</h3>
-      <div class="mem-test-grid">
-        <div class="mem-test-card"><p>"Membership lene ke baad se meri back pain ki samasya khatam ho gayi kyunki ab main regular hoon."</p><strong>— Aakash Mehta, Gold Member</strong></div>
-        <div class="mem-test-card"><p>"Gold membership best value for money hai. Guest pass se maine apni wife ko bhi treat kiya!"</p><strong>— Vikram Joshi, Gold Member</strong></div>
-      </div>
-    </div>
-
-    <div class="faqs-wrap" style="margin-top:60px">
-      <h3 class="sec-h2" data-i18n="faqTitle">Frequently Asked Questions — Spa Membership Kothrud</h3>
-      <div class="faq-list">
-        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text" data-i18n="faq1q">Can I cancel my membership?</span> <span>+</span></button><div class="faq-a" data-i18n="faq1a">Yes, cancel anytime. Pro-rata refund for unused sessions. 10% service charge applies if cancelled within 3 months.</div></div>
-        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text" data-i18n="faq2q">Do unused sessions carry forward?</span> <span>+</span></button><div class="faq-a" data-i18n="faq2a">Absolutely! Sessions don't expire. Use them next month.</div></div>
-        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text" data-i18n="faq3q">Can I gift membership to someone?</span> <span>+</span></button><div class="faq-a" data-i18n="faq3a">Yes! Gift cards are available for any loved one.</div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════════════════
-     ABOUT PAGE
-     Primary KW  : mauli ayurvedic massage therapy kothrud
-     Supporting  : authentic ayurvedic massage kothrud |
-                   professional massage therapist kothrud |
-                   genuine massage center in kothrud | ayurvedic upchar kendra kothrud
-═══════════════════════════════════════════════════════════════ -->
-<section id="page-about" class="page"
-  data-page-title="Mauli Ayurvedic Massage Therapy Kothrud — About Us | Authentic Ayurvedic Upchar Kendra Pune"
-  data-page-desc="About Mauli Spa — authentic Ayurvedic massage therapy in Kothrud. Government certified ayurvedic upchar kendra, professional massage therapists, 15+ years experience. Karve Road Pune."
-  data-page-url="/about/"
-  aria-label="About Mauli Ayurvedic Massage Therapy Kothrud">
-
-  <div class="page-banner" style="background-image:url('assets/about/about.webp')">
-    <div class="pb-overlay"></div>
-    <div class="pb-content">
-      <h1 data-i18n="aboutH1">About Mauli Ayurvedic Massage Therapy Kothrud</h1>
-      <p>Authentic Ayurvedic Upchar Kendra — Where Peace Meets Wellness, Karve Road Pune</p>
-    </div>
-  </div>
-
-  <div class="container" style="padding:60px 20px">
-    <div class="about-grid">
-      <div class="about-story">
-        <div class="sec-badge" data-i18n="ourStory">Our Story</div>
-        <h2 class="sec-h2" data-i18n="aboutTitle">The Story of Mauli Spa — Kothrud's Trusted Ayurvedic Center</h2>
-        <h3 style="font-family:var(--fd);font-size:1.05rem;color:var(--gold-dk);margin-bottom:18px;font-style:italic;" data-i18n="aboutSubtitle">Unit of Mauli Ayurvedic Massage Therapy — Genuine Massage Center in Kothrud</h3>
-        <p data-i18n="aboutP1">Mauli Spa began with a dream — to create a place where people can truly relax away from the chaos of daily life. As the most <strong>authentic ayurvedic massage center in Kothrud</strong>, we combine traditional Ayurvedic wisdom with modern comfort.</p>
-        <p data-i18n="aboutP2">Combining ancient Ayurvedic traditions with modern wellness practices, we created a sanctuary that nourishes your body, mind and soul. Our <strong>professional massage therapists in Kothrud</strong> are trained and government certified.</p>
-        <p data-i18n="aboutP3">Our mission isn't just massage — it's bringing sustained wellness into your life. We are a <strong>government-certified Ayurvedic upchar kendra in Kothrud Pune</strong> with 15+ years of experience and 5,000+ satisfied clients.</p>
-        <div class="about-stats">
-          <div class="stat-box"><strong>15+</strong><span data-i18n="statYears">Years</span></div>
-          <div class="stat-box"><strong>5000+</strong><span data-i18n="statClients">Clients</span></div>
-          <div class="stat-box"><strong>24+</strong><span data-i18n="statTherapies">Therapies</span></div>
-          <div class="stat-box"><strong>4.9★</strong><span data-i18n="statRating">Rating</span></div>
-        </div>
-      </div>
-      <div class="about-img-wrap" style="position:relative;">
-        <div class="about-img-skel skel-pulse" id="aboutImgSkel" style="position:absolute;inset:0;border-radius:20px;z-index:1;"></div>
-        <img src="assets/about/sumansolanki.webp" alt="Mrs. Suman Solanki — Founder, Mauli Ayurvedic Massage Therapy Kothrud"
-          style="opacity:0;transition:opacity .5s;"
-          onload="this.style.opacity='1';var s=document.getElementById('aboutImgSkel');if(s)s.style.display='none';">
-      </div>
-    </div>
-
-    <div class="vision-row">
-      <div class="vision-card"><div class="vc-icon"><i class="fas fa-eye"></i></div><h3 data-i18n="ourVision">Our Vision</h3><p data-i18n="visionDesc">To promote a stress-free lifestyle and guide every client toward complete wellness — best ayurvedic spa in kothrud.</p></div>
-      <div class="vision-card"><div class="vc-icon"><i class="fas fa-heart"></i></div><h3 data-i18n="ourMission">Our Mission</h3><p data-i18n="missionDesc">Combining ancient Ayurvedic wisdom with modern comfort — authentic ayurvedic massage kothrud.</p></div>
-      <div class="vision-card"><div class="vc-icon"><i class="fas fa-seedling"></i></div><h3 data-i18n="ourValues">Our Values</h3><p data-i18n="valuesDesc">Authenticity, purity, care and continuous improvement — our core values at Mauli Ayurvedic Massage Therapy.</p></div>
-    </div>
-
-    <h3 class="sec-h2" style="margin-bottom:30px" data-i18n="ourTeam">Our Team — Professional Massage Therapists Kothrud</h3>
-    <div class="team-grid">
-      <div class="team-card">
-        <div class="team-img-skel skel-pulse" id="ti1"></div>
-        <div class="team-img" style="background-image:url('assets/about/sumansolanki.webp')"></div>
-        <h4>Mrs. Suman Solanki</h4><p>Founder &amp; Head Therapist</p><small>15+ Years Experience — Mauli Ayurvedic Massage Therapy</small>
-      </div>
-      <div class="team-card">
-        <div class="team-img-skel skel-pulse" id="ti2"></div>
-        <div class="team-img" style="background-image:url('assets/about/rani.png')"></div>
-        <h4>Rani Shindhe</h4><p>Senior Ayurvedic Therapist</p><small>2 Years Experience</small>
-      </div>
-      <div class="team-card">
-        <div class="team-img-skel skel-pulse" id="ti3"></div>
-        <div class="team-img" style="background-image:url('assets/about/male.png')"></div>
-        <h4>Rahul Kumar</h4><p>Deep Tissue Specialist</p><small>3+ Years Experience</small>
-      </div>
-      <div class="team-card">
-        <div class="team-img-skel skel-pulse" id="ti4"></div>
-        <div class="team-img" style="background-image:url('assets/about/rani.png')"></div>
-        <h4>Anita Patil</h4><p>Potli &amp; Herbal Junior</p><small>Ongoing Training</small>
-      </div>
-      <div class="team-card special-card">
-        <div class="team-img-skel skel-pulse" id="ti5"></div>
-        <div class="team-img" style="background-image:url('assets/about/tarunkumar.webp?w=300&h=300&fit=crop')"></div>
-        <h4>Tarun Kumar</h4><p>Marketing Expert</p><small>5 Years · Tarun Kumar</small>
-        <a href="https://wa.me/+919205806024" target="_blank" rel="noopener" class="btn-gold btn-sm" style="margin-top:10px;display:inline-flex;align-items:center;gap:6px;"><i class="fab fa-whatsapp"></i> Connect</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════════════════
-     CONTACT PAGE
-     Primary KW  : massage center near the business hub kothrud
-     Supporting  : spa near karve road | body massage near happy colony kothrud |
-                   massage center near me | spa open now kothrud |
-                   massage appointment kothrud
-═══════════════════════════════════════════════════════════════ -->
-<section id="page-contact" class="page"
-  data-page-title="Book Massage Appointment Kothrud — Spa Near Karve Road, Happy Colony | Mauli Spa"
-  data-page-desc="Book massage appointment at Mauli Spa — massage center near The Business Hub, Karve Road, Happy Colony, Kothrud Pune. Open 7 days 10AM–9PM. Call 9307360513."
-  data-page-url="/contact/"
-  aria-label="Book Massage Appointment — Massage Center Near Karve Road Kothrud">
-
-  <div class="page-banner" style="background-image:url('assets/contactus/contactus.webp')">
-    <div class="pb-overlay"></div>
-    <div class="pb-content">
-      <h1 data-i18n="contactH1">Book Massage Appointment Kothrud</h1>
-      <p data-i18n="contactSub">Massage center near The Business Hub, Karve Road, Happy Colony — Spa open now Kothrud, 10AM–9PM</p>
-    </div>
-  </div>
-
-  <div class="container" style="padding:60px 20px">
-    <div class="contact-layout">
-      <div class="contact-form-side">
-        <h2 data-i18n="startJourney">Start Your Wellness Journey — Massage Center Near Me Kothrud</h2>
-        <p data-i18n="contactFormDesc">Enter your name and number — we'll contact you within 15 minutes!</p>
-        <div id="contactFormWrap">
-          <div class="form-group"><label data-i18n="fName">Your Name *</label><input type="text" id="fName" placeholder="Your name" autocomplete="name"></div>
-          <div class="form-group"><label data-i18n="fPhone">Mobile Number *</label><input type="tel" id="fPhone" placeholder="+91 XXXXX XXXXX" autocomplete="tel"></div>
-          <div class="form-group">
-            <label data-i18n="fIdProof">Bring any Government ID for Physical Verification *</label>
-            <select id="fIdProof">
-              <option value="">-- Select ID Proof --</option>
-              <option>Aadhaar Card</option><option>PAN Card</option><option>Voter ID</option><option>Passport</option><option>Driving Licence</option>
-            </select>
-          </div>
-          <div class="form-group"><label data-i18n="fService">Service Interested In</label>
-            <select id="fService">
-              <option value="">Select a therapy...</option>
-              <option>Spa Pack — ₹3,999</option><option>Potli Massage — ₹2,999</option><option>Couple Massage — ₹2,699</option><option>Medicinal Oil Massage — ₹2,499</option><option>Deep Tissue Massage — ₹2,199</option><option>Aloe Vera Gel Massage — ₹1,999</option><option>Cream Massage — ₹1,799</option><option>Til Tel Massage — ₹1,499</option><option>Powder Massage — ₹1,299</option><option>Facial — ₹999</option><option>Back Pain Massage — ₹999</option><option>Leg Pain Massage — ₹999</option><option>Foot Massage — ₹499</option><option>Head Massage — ₹499</option>
-            </select>
-          </div>
-          <div class="form-row">
-            <div class="form-group"><label data-i18n="fDate">Preferred Date</label><input type="date" id="fDate"></div>
-            <div class="form-group"><label data-i18n="fTime">Preferred Time</label>
-              <select id="fTime"><option>10:00 AM</option><option>11:00 AM</option><option>12:00 PM</option><option>1:00 PM</option><option>2:00 PM</option><option>3:00 PM</option><option>4:00 PM</option><option>5:00 PM</option><option>6:00 PM</option><option>7:00 PM</option><option>8:00 PM</option></select>
-            </div>
-          </div>
-          <div class="form-group"><label data-i18n="fMsg">Message</label><textarea id="fMsg" rows="3" placeholder="Any special requirement?"></textarea></div>
-          <div class="form-group tc-checkbox-wrap">
-            <label class="tc-checkbox-label">
-              <input type="checkbox" id="fTcAccept">
-              <span data-i18n="tcAcceptLabel">I have read and agree to the</span>
-              <a href="/terms/" onclick="event.preventDefault();openLegalPopup('terms')" class="tc-link" data-i18n="tcLinkText">Terms &amp; Conditions</a>
-            </label>
-            <div id="tcError" class="ferr" style="display:none" data-i18n="tcError">Please accept the Terms &amp; Conditions to proceed.</div>
-          </div>
-          <button class="btn-gold btn-full" onclick="submitContactForm()" data-i18n="submitBtn">Start Your Wellness Journey 🌿</button>
-        </div>
-        <div id="formSuccess" class="form-success" style="display:none">
-          <i class="fas fa-check-circle"></i><h3>Thank You!</h3><p data-i18n="formSuccessMsg">We received your message. We'll call you within 15 minutes!</p>
-        </div>
-        <div class="contact-faqs">
-          <h4 data-i18n="quickFaqs">Quick FAQs — Massage Center Kothrud</h4>
-          <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text" data-i18n="cfaq1q">Is pre-booking necessary?</span> <span>+</span></button><div class="faq-a" data-i18n="cfaq1a">Walk-in available, but advance booking recommended for a guaranteed slot. Book massage appointment Kothrud: 9307360513.</div></div>
-          <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text" data-i18n="cfaq2q">Is parking available?</span> <span>+</span></button><div class="faq-a" data-i18n="cfaq2a">Yes, ample parking at The Business Hub, Karve Road Kothrud.</div></div>
-        </div>
-      </div>
-
-      <div class="contact-info-side">
-        <div class="contact-info-card">
-          <h3 data-i18n="findUs">Find Us — Massage Center Near Karve Road Kothrud</h3>
-          <div class="ci-item"><i class="fas fa-map-marker-alt"></i><div><b>Address</b><p>Shop No 112, First Floor, The Business Hub, Karve Rd, opposite Mirch Masala Restaurant, Happy Colony, Kothrud, Pune 411038</p><a href="https://www.google.com/maps/dir//MAULI+AYURVEDIC+MASSAGE+THERAPY" target="_blank" rel="noopener" class="direction-link" data-i18n="getDirections">Get Directions →</a></div></div>
-          <div class="ci-item"><i class="fas fa-phone"></i><div><b>Call Now — Spa Open Now Kothrud</b><p><a href="tel:9156972622">9156972622</a></p></div></div>
-          <div class="ci-item"><i class="fab fa-whatsapp"></i><div><b>WhatsApp</b><a href="https://wa.me/919307360513" target="_blank" rel="noopener" class="btn-gold btn-sm" style="margin-top:6px;display:inline-flex">Chat Now</a></div></div>
-          <div class="ci-item"><i class="fas fa-envelope"></i><div><b>Email</b><p><a href="mailto:maulispa33@gmail.com">maulispa33@gmail.com</a></p></div></div>
-          <div class="ci-item"><i class="fas fa-clock"></i><div><b>Hours — Spa Open Now Kothrud</b><p>Mon – Sun: 10 AM – 9 PM</p></div></div>
-        </div>
-        <div class="map-wrap" style="position:relative;">
-          <div class="map-skel skel-pulse" id="mapSkel" style="height:280px;border-radius:12px;"></div>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.5!2d73.8127!3d18.4937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf11cbd9639d%3A0x2d2abe20f4f1037a!2sMauli+Ayurvedic+Massage+Therapy!5e0!3m2!1sen!2sin!4v1234"
-            width="100%" height="280" style="border:0;border-radius:12px;display:block;" allowfullscreen loading="lazy"
-            title="Mauli Spa Location — Massage Center near The Business Hub Karve Road Kothrud Pune"
-            onload="document.getElementById('mapSkel').style.display='none'"></iframe>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════════════════
-     MORE PAGE
-     Primary KW  : massage therapy benefits kothrud
-     Supporting  : massage cost in kothrud | which massage is best for back pain |
-                   ayurvedic massage benefits | potli massage benefits |
-                   deep tissue massage benefits
-═══════════════════════════════════════════════════════════════ -->
-<section id="page-more" class="page"
-  data-page-title="Massage Therapy Benefits Kothrud — FAQ, Refer & Earn, Join Team | Mauli Spa"
-  data-page-desc="Massage therapy benefits in Kothrud. Which massage is best for back pain? Ayurvedic, potli, deep tissue massage benefits. Refer & earn, join team, learning center. Mauli Spa Pune."
-  data-page-url="/more/"
-  aria-label="More — Massage Therapy Benefits, FAQ, Refer & Earn Kothrud">
-
-  <div class="page-banner" style="background-image:url('assets/more/more.webp')">
-    <div class="pb-overlay"></div>
-    <div class="pb-content">
-      <h1 data-i18n="moreH1">More from Mauli Spa Kothrud</h1>
-      <p data-i18n="moreSub">Massage therapy benefits, FAQ, Refer &amp; Earn, Join Team — Ayurvedic massage benefits Kothrud</p>
-    </div>
-  </div>
-
-  <div class="container" style="padding:60px 20px">
-
-    <!-- FAQ / Massage Benefits section — SEO crawlable -->
-    <div style="margin-bottom:40px;padding:24px;background:var(--bg-light,#f9f7f2);border-radius:12px;">
-      <h2 class="sec-h2" style="margin-bottom:16px;">Massage Therapy Benefits Kothrud — Frequently Asked Questions</h2>
-      <div class="faq-list">
-        <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
-            <span class="faq-q-text">Which massage is best for back pain in Kothrud?</span> <span>+</span>
-          </button>
-          <div class="faq-a">
-            <strong>Deep Tissue Massage</strong> and <strong>Back Pain Massage</strong> are the best for back pain in Kothrud. Deep Tissue Massage (₹2,199, 70 mins) targets chronic muscle tension and spine pain. Back Pain Massage (₹999, 30 mins) gives instant targeted relief. Potli Massage is also excellent for joint-related back pain. Book at Mauli Spa, Karve Road: <a href="tel:9307360513">9307360513</a>.
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
-            <span class="faq-q-text">Ayurvedic massage ke kya fayde hain?</span> <span>+</span>
-          </button>
-          <div class="faq-a">
-            Ayurvedic massage benefits include: stress &amp; anxiety relief, better blood circulation, skin glow, joint &amp; muscle pain relief, improved sleep, immunity boost and body detox. Mauli Spa Kothrud mein 100% natural herbal oils se certified therapists massage karte hain.
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
-            <span class="faq-q-text">Potli massage ke kya fayde hain?</span> <span>+</span>
-          </button>
-          <div class="faq-a">
-            Potli massage benefits: joint pain relief, arthritis help, muscle stiffness reduction, deep relaxation, improved circulation and skin nourishment. Mauli Spa Kothrud mein Potli Massage ₹2,999 mein 90 min ka available hai.
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
-            <span class="faq-q-text">Massage cost in Kothrud kya hai?</span> <span>+</span>
-          </button>
-          <div class="faq-a">
-            Mauli Spa Kothrud mein massage price: Foot Massage ₹499, Head Massage ₹499, Back Pain Massage ₹999, Facial ₹999, Til Tel ₹1,499, Cream ₹1,799, Aloe Vera ₹1,999, Deep Tissue ₹2,199, Medicinal Oil ₹2,499, Couple ₹2,699, Potli ₹2,999, Spa Pack ₹3,999. Karve Road, The Business Hub.
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
-            <span class="faq-q-text">Deep tissue massage benefits kya hain?</span> <span>+</span>
-          </button>
-          <div class="faq-a">
-            Deep tissue massage benefits: chronic back &amp; neck pain relief, muscle knot release, posture improvement, sports injury recovery, stress reduction. Mauli Spa Kothrud mein Deep Tissue Massage ₹2,199 mein 70 min ka available hai certified therapist ke saath.
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
-            <span class="faq-q-text">Foot massage benefits kya hain?</span> <span>+</span>
-          </button>
-          <div class="faq-a">
-            Foot massage benefits: tired leg relief, better sleep, stress reduction, improved blood circulation in feet and legs, reflexology pressure points stimulation. Mauli Spa Karve Road Kothrud mein Foot Massage sirf ₹499 mein milti hai.
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
-            <span class="faq-q-text">Head massage benefits kya hain?</span> <span>+</span>
-          </button>
-          <div class="faq-a">
-            Head massage benefits: instant stress relief, better sleep quality, headache and migraine reduction, improved focus, scalp health. Mauli Spa Kothrud mein Head Massage ₹499 mein 20 min ka available hai.
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="more-cards-grid">
-      <div class="more-feature-card refer-card">
-        <div class="mfc-icon"><i class="fas fa-gift"></i></div>
-        <h3 data-i18n="referTitle">Refer &amp; Earn Discount — Mauli Spa Kothrud</h3>
-        <p data-i18n="referDesc">Refer a friend to Mauli Ayurvedic Massage and both get a discount! Valid on services above ₹1,500.</p>
-        <div class="refer-steps">
-          <div class="rs"><span>1</span><p data-i18n="rs1">Refer Mauli Spa to your friends</p></div>
-          <div class="rs"><span>2</span><p data-i18n="rs2">After friend's visit, you get a discount</p></div>
-          <div class="rs"><span>3</span><p data-i18n="rs3">Friend gets a special discount on first therapy!</p></div>
-        </div>
-        <div class="refer-benefits">
-          <div class="rb"><i class="fas fa-tag"></i><span data-i18n="referYouGet">You get: 10% off on next service (min ₹1,500)</span></div>
-          <div class="rb"><i class="fas fa-tag"></i><span data-i18n="referFriendGet">Friend gets: 5% off on first visit</span></div>
-        </div>
-        <button class="btn-gold" onclick="openReferModal()" data-i18n="referNow">Refer Now</button>
-        <p class="terms-note" data-i18n="referTerms">*Terms apply. Valid on services above ₹1,500 only.</p>
-      </div>
-
-      <div class="more-feature-card">
-        <div class="mfc-icon"><i class="fas fa-users"></i></div>
-        <h3 data-i18n="joinTeamTitle">Join Mauli Spa Kothrud as Team</h3>
-        <p data-i18n="joinTeamDesc">Become part of Mauli Spa's growing family. Choose your work style!</p>
-        <div class="join-options">
-          <div class="jo-card">
-            <div class="jo-icon"><i class="fas fa-briefcase"></i></div>
-            <h4 data-i18n="salariedTitle">Salaried</h4>
-            <ul class="jo-list">
-              <li data-i18n="sal1">Fixed monthly salary</li>
-              <li data-i18n="sal2">PF &amp; ESI benefits</li>
-              <li data-i18n="sal4">Training provided</li>
-            </ul>
-            <button class="btn-outline btn-sm" onclick="openJobModal('salaried')" data-i18n="applyNow">Apply Now</button>
-          </div>
-          <div class="jo-card">
-            <div class="jo-icon"><i class="fas fa-user-clock"></i></div>
-            <h4 data-i18n="freelanceTitle">Freelancer</h4>
-            <ul class="jo-list">
-              <li data-i18n="fr1">Flexible hours</li>
-              <li data-i18n="fr2">Per-15 Days payment</li>
-              <li data-i18n="fr3">Work from our center</li>
-              <li data-i18n="fr4">Upscale your Therapy skill</li>
-            </ul>
-            <button class="btn-outline btn-sm" onclick="openJobModal('freelancer')" data-i18n="applyNow">Apply Now</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="more-feature-card learn-card">
-        <div class="mfc-icon"><i class="fas fa-graduation-cap"></i></div>
-        <h3 data-i18n="learningTitle">Learning Center — Ayurvedic Massage Kothrud</h3>
-        <p data-i18n="learningDesc">Learn about Ayurveda and wellness. Courses and workshops available!</p>
-        <div class="learn-grid">
-          <div class="lg-item"><i class="fas fa-book-open"></i><h5 data-i18n="l1h">Ayurveda Basics</h5><p data-i18n="l1p">Introduction to Ayurvedic principles</p></div>
-          <div class="lg-item"><i class="fas fa-hands"></i><h5 data-i18n="l2h">Massage Techniques</h5><p data-i18n="l2p">Learn professional massage skills</p></div>
-          <div class="lg-item"><i class="fas fa-flask"></i><h5 data-i18n="l3h">Oil &amp; Herb Knowledge</h5><p data-i18n="l3p">Pure Ayurvedic oils and herbs</p></div>
-          <div class="lg-item lg-cert-card">
-            <div class="lg-cert-top"><i class="fas fa-certificate"></i><h5 data-i18n="l4h">Certification Course</h5><p data-i18n="l4p">Get certified as Ayurvedic therapist</p></div>
-            <div class="lg-cert-strip"><i class="fas fa-hourglass-half"></i><span data-i18n="comingSoon">Coming Soon</span></div>
-          </div>
-        </div>
-        <button class="btn-gold" onclick="openLearnModal()" data-i18n="learnEnroll">Enroll Now</button>
-      </div>
-    </div>
-
-    <div class="more-quick-grid">
-      <a class="mq-card" href="/therapies/" onclick="event.preventDefault();navTo('therapies')"><i class="fas fa-spa"></i><h4 data-i18n="qTherapies">All Therapies</h4></a>
-      <a class="mq-card" href="/membership/" onclick="event.preventDefault();navTo('membership')"><i class="fas fa-crown"></i><h4 data-i18n="qMembership">Membership</h4></a>
-      <a class="mq-card" href="https://wa.me/c/919307360513" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i><h4 data-i18n="qCatalogue">E-Catalogue</h4></a>
-      <a class="mq-card" href="/gallery/" onclick="event.preventDefault();navTo('gallery')"><i class="fas fa-images"></i><h4 data-i18n="qGallery">Gallery</h4></a>
-      <a class="mq-card" href="https://instagram.com/maulispa" target="_blank" rel="noopener"><i class="fab fa-instagram"></i><h4>Instagram</h4></a>
-      <a class="mq-card" href="https://youtube.com/@maulispa" target="_blank" rel="noopener"><i class="fab fa-youtube"></i><h4>YouTube</h4></a>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════════════════
-     BLOG PAGE
-     Primary KW  : massage benefits and health tips
-     Supporting  : benefits of ayurvedic massage | massage for back pain |
-                   massage for stress relief | deep tissue massage benefits |
-                   foot massage benefits | head massage benefits
-═══════════════════════════════════════════════════════════════ -->
-<section id="page-blog" class="page"
-  data-page-title="Ayurvedic Massage Benefits Blog — Shirodhara, Abhyang, Women Health, Sleep, Skin | Mauli Spa Kothrud"
-  data-page-desc="Ayurvedic massage health tips in Hindi, Marathi & English. Shirodhara, Abhyang, women health, PCOD, pregnancy massage, skin glow, stress relief, sleep benefits. Mauli Spa Kothrud Pune."
-  data-page-url="/blog/"
-  aria-label="Blog — Ayurvedic Massage Benefits Kothrud Pune">
-
-  <div class="page-banner" style="background-image:url('assets/more/more.webp')">
-    <div class="pb-overlay"></div>
-    <div class="pb-content">
-      <h1 id="blogH1" data-i18n="blogH1">Massage Benefits &amp; Health Tips — Ayurvedic Wellness Blog</h1>
-      <p id="blogSub" data-i18n="blogSub">Shirodhara · Abhyang · Women Health · Sleep · Skin · Stress Relief | Kothrud Pune</p>
-    </div>
-  </div>
-
-  <div class="container" style="padding:60px 20px">
-    <h2 class="sec-h2" id="blogTitle" data-i18n="blogTitle">Ayurvedic Massage Health Tips &amp; Benefits — Kothrud Pune</h2>
-
-    <!-- ── LANGUAGE TABS ── -->
-    <div style="display:flex;gap:10px;margin-bottom:28px;flex-wrap:wrap;">
-      <button onclick="setBlogLang('en')" id="blTabEn" class="btn-gold btn-sm" style="opacity:1;">English</button>
-      <button onclick="setBlogLang('hi')" id="blTabHi" class="btn-outline btn-sm" style="">हिंदी</button>
-      <button onclick="setBlogLang('mr')" id="blTabMr" class="btn-outline btn-sm" style="">मराठी</button>
-    </div>
-
-    <!-- ══════════════════════════════════════════════
-         ENGLISH ARTICLES
-    ══════════════════════════════════════════════ -->
-    <div id="blogEn" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;">
-
-      <article style="border:1px solid var(--border);border-radius:12px;overflow:hidden;background:#fff;">
-        <div style="padding:20px;">
-          <span style="font-size:11px;color:var(--gold-dk);font-weight:600;text-transform:uppercase;letter-spacing:.06em;">Shirodhara Benefits</span>
-          <h3 style="margin:8px 0 10px;font-size:1.05rem;color:var(--green);">Shirodhara Ayurvedic Massage — Benefits &amp; What to Expect</h3>
-          <p style="font-size:0.87rem;color:var(--text2);line-height:1.6;">Shirodhara is an ancient Ayurvedic therapy where warm herbal oil is poured in a continuous stream on the forehead (third eye). It deeply calms the nervous system, relieves chronic stress, migraines, insomnia and anxiety. Regular Shirodhara at Mauli Spa Kothrud helps balance Vata and Pitta doshas, improves mental clarity and promotes deep sleep. Ideal for IT professionals and those with high stress levels.</p>
-          <a href="/contact/" onclick="event.preventDefault();navTo('contact')" style="display:inline-block;margin-top:12px;color:var(--gold-dk);font-size:0.88rem;font-weight:600;">Book Shirodhara →</a>
-        </div>
-      </article>
-
-      <article style="border:1px solid var(--border);border-radius:12px;overflow:hidden;background:#fff;">
-        <div style="padding:20px;">
-          <span style="font-size:11px;color:var(--gold-dk);font-weight:600;text-transform:uppercase;letter-spacing:.06em;">Abhyang Massage Benefits</span>
-          <h3 style="margin:8px 0 10px;font-size:1.05rem;color:var(--green);">Abhyang Ayurvedic Massage — Full Body Healing Therapy</h3>
-          <p style="font-size:0.87rem;color:var(--text2);line-height:1.6;">Abhyang (Abhyanga) is the traditional Ayurvedic full-body oil massage using warm medicated oils with long rhythmic strokes. It nourishes all 7 layers of skin (Sapta Dhatu), improves blood circulation, removes toxins (Ama), strengthens muscles and joints, and promotes deep relaxation. Daily or weekly Abhyang at Mauli Spa Kothrud slows aging, boosts immunity and restores mind-body balance.</p>
-          <a href="/contact/" onclick="event.preventDefault();navTo('contact')" style="display:inline-block;margin-top:12px;color:var(--gold-dk);font-size:0.88rem;font-weight:600;">Book Abhyang →</a>
-        </div>
-      </article>
-
-      <article style="border:1px solid var(--border);border-radius:12px;overflow:hidden;background:#fff;">
-        <div style="padding:20px;">
-          <span style="font-size:11px;color:var(--gold-dk);font-weight:600;text-transform:uppercase;letter-spacing:.06em;">Women Health</span>
-          <h3 style="margin:8px 0 10px;font-size:1.05rem;color:var(--green);">Pregnancy Massage Benefits — Safe Ayurvedic Care for Mothers</h3>
-          <p style="font-size:0.87rem;color:var(--text2);line-height:1.6;">Gentle Ayurvedic pregnancy massage reduces back pain, swollen legs, stress and anxiety during pregnancy. It improves blood flow to the baby, reduces water retention, eases hip and pelvic pain and promotes better sleep. Post-delivery massage helps the body recover faster, reduces postpartum depression and supports hormonal balance. Always consult your doctor before booking. Mauli Spa Kothrud offers safe certified therapy for expecting mothers.</p>
-          <a href="/contact/" onclick="event.preventDefault();navTo('contact')" style="display:inline-block;margin-top:12px;color:var(--gold-dk);font-size:0.88rem;font-weight:600;">Book Now →</a>
-        </div>
-      </article>
-
-      <article style="border:1px solid var(--border);border-radius:12px;overflow:hidden;background:#fff;">
-        <div style="padding:20px;">
-          <span style="font-size:11px;color:var(--gold-dk);font-weight:600;text-transform:uppercase;letter-spacing:.06em;">Women Health — PCOD / Fibroids</span>
-          <h3 style="margin:8px 0 10px;font-size:1.05rem;color:var(--green);">Massage for PCOD, Uterine Fibroids &amp; Yoni Care</h3>
-          <p style="font-size:0.87rem;color:var(--text2);line-height:1.6;">Ayurvedic abdominal massage and medicated oil therapy helps women with PCOD (PCOS) by reducing inflammation, balancing hormones and improving blood flow to the reproductive organs. For uterine fibroids, regular Ayurvedic massage reduces pain, bloating and heavy periods. Yoni (vaginal) care through warm oil therapies helps with dryness, discomfort and reproductive health. Breast care massage improves lymphatic drainage and reduces tenderness. Consult our certified female therapist at Mauli Spa Kothrud for personalised care.</p>
-          <a href="/contact/" onclick="event.preventDefault();navTo('contact')" style="display:inline-block;margin-top:12px;color:var(--gold-dk);font-size:0.88rem;font-weight:600;">Book with Female Therapist →</a>
-        </div>
-      </article>
-
-      <article style="border:1px solid var(--border);border-radius:12px;overflow:hidden;background:#fff;">
-        <div style="padding:20px;">
-          <span style="font-size:11px;color:var(--gold-dk);font-weight:600;text-transform:uppercase;letter-spacing:.06em;">Sleep Benefits</span>
-          <h3 style="margin:8px 0 10px;font-size:1.05rem;color:var(--green);">How Ayurvedic Massage Improves Sleep Quality</h3>
-          <p style="font-size:0.87rem;color:var(--text2);line-height:1.6;">Ayurvedic massage triggers the release of serotonin and melatonin — the hormones responsible for deep, restful sleep. It calms an overactive nervous system, reduces cortisol (stress hormone), relaxes tight muscles and quiets mental chatter. Head massage, Shirodhara and til tel massage are especially effective for insomnia. Regular massage at Mauli Spa Kothrud helps you fall asleep faster and wake up refreshed. Ideal for those with night shifts or irregular sleep patterns.</p>
-          <a href="/contact/" onclick="event.preventDefault();navTo('contact')" style="display:inline-block;margin-top:12px;color:var(--gold-dk);font-size:0.88rem;font-weight:600;">Book for Better Sleep →</a>
-        </div>
-      </article>
-
-      <article style="border:1px solid var(--border);border-radius:12px;overflow:hidden;background:#fff;">
-        <div style="padding:20px;">
-          <span style="font-size:11px;color:var(--gold-dk);font-weight:600;text-transform:uppercase;letter-spacing:.06em;">Skin Benefits</span>
-          <h3 style="margin:8px 0 10px;font-size:1.05rem;color:var(--green);">Ayurvedic Massage for Skin Glow &amp; Anti-Aging</h3>
-          <p style="font-size:0.87rem;color:var(--text2);line-height:1.6;">Ayurvedic herbal oils deeply nourish all 7 layers of skin (Sapta Dhatu). Regular massage removes dead skin cells, stimulates collagen production and improves skin elasticity. Aloe vera gel massage, cream massage and medicinal oil massage at Mauli Spa Kothrud reduce dark spots, dryness and dullness. The result is naturally glowing, soft and youthful skin. Powder massage (Udvartana) helps with oily skin and weight management. Book a facial or body massage for visible skin improvement in just 2–3 sessions.</p>
-          <a href="/contact/" onclick="event.preventDefault();navTo('contact')" style="display:inline-block;margin-top:12px;color:var(--gold-dk);font-size:0.88rem;font-weight:600;">Book for Skin Glow →</a>
-        </div>
-      </article>
-
-      <article style="border:1px solid var(--border);border-radius:12px;overflow:hidden;background:#fff;">
-        <div style="padding:20px;">
-          <span style="font-size:11px;color:var(--gold-dk);font-weight:600;text-transform:uppercase;letter-spacing:.06em;">Blood Circulation</span>
-          <h3 style="margin:8px 0 10px;font-size:1.05rem;color:var(--green);">Massage for Better Blood Flow &amp; Circulation</h3>
-          <p style="font-size:0.87rem;color:var(--text2);line-height:1.6;">Massage dilates blood vessels and improves circulation throughout the body. Better blood flow means more oxygen and nutrients reach muscles, organs and skin. It reduces varicose veins, cold hands and feet, numbness and fatigue. Deep tissue massage, foot reflexology and full body Abhyang at Mauli Spa Kothrud are especially effective for poor circulation. Regular massage also lowers blood pressure and reduces risk of heart disease. Ideal for diabetics, elderly and those with sedentary lifestyles.</p>
-          <a href="/contact/" onclick="event.preventDefault();navTo('contact')" style="display:inline-block;margin-top:12px;color:var(--gold-dk);font-size:0.88rem;font-weight:600;">Book Now →</a>
-        </div>
-      </article>
-
-      <article style="border:1px solid var(--border);border-radius:12px;overflow:hidden;background:#fff;">
-        <div style="padding:20px;">
-          <span style="font-size:11px;color:var(--gold-dk);font-weight:600;text-transform:uppercase;letter-spacing:.06em;">Stress &amp; Anxiety Relief</span>
-          <h3 style="margin:8px 0 10px;font-size:1.05rem;color:var(--green);">How Massage Helps with Stress, Anxiety &amp; Depression</h3>
-          <p style="font-size:0.87rem;color:var(--text2);line-height:1.6;">Massage reduces cortisol (stress hormone) by up to 30% in a single session. It activates the parasympathetic nervous system — the body's natural relaxation response — releasing endorphins, serotonin and dopamine. Shirodhara and head massage are most effective for anxiety. Regular Ayurvedic massage at Mauli Spa Kothrud reduces overthinking, emotional exhaustion and burnout. Even a 30-minute back or head massage significantly reduces stress levels. Recommended for working professionals, students and caregivers.</p>
-          <a href="/contact/" onclick="event.preventDefault();navTo('contact')" style="display:inline-block;margin-top:12px;color:var(--gold-dk);font-size:0.88rem;font-weight:600;">Book Stress Relief →</a>
-        </div>
-      </article>
-
-      <article style="border:1px solid var(--border);border-radius:12px;overflow:hidden;background:#fff;">
-        <div style="padding:20px;">
-          <span style="font-size:11px;color:var(--gold-dk);font-weight:600;text-transform:uppercase;letter-spacing:.06em;">Ayurvedic Massage Benefits</span>
-          <h3 style="margin:8px 0 10px;font-size:1.05rem;color:var(--green);">Benefits of Ayurvedic Massage for Stress Relief</h3>
-          <p style="font-size:0.87rem;color:var(--text2);line-height:1.6;">Ayurvedic massage uses warm herbal oils to calm the nervous system, reduce cortisol levels and provide deep stress relief. Regular sessions at Mauli Spa Kothrud help reduce anxiety, improve sleep and restore mental balance.</p>
-          <a href="/contact/" onclick="event.preventDefault();navTo('contact')" style="display:inline-block;margin-top:12px;color:var(--gold-dk);font-size:0.88rem;font-weight:600;">Book a Session →</a>
-        </div>
-      </article>
-
-      <article style="border:1px solid var(--border);border-radius:12px;overflow:hidden;background:#fff;">
-        <div style="padding:20px;">
-          <span style="font-size:11px;color:var(--gold-dk);font-weight:600;text-transform:uppercase;letter-spacing:.06em;">Deep Tissue Massage</span>
-          <h3 style="margin:8px 0 10px;font-size:1.05rem;color:var(--green);">Deep Tissue Massage Benefits for Back &amp; Shoulder Pain</h3>
-          <p style="font-size:0.87rem;color:var(--text2);line-height:1.6;">Deep tissue massage targets the deeper layers of muscle tissue to release chronic tension. Best massage for back pain in Kothrud — relieves lower back pain, neck stiffness and shoulder knots. Available at ₹2,199 (70 mins) at Mauli Spa Karve Road.</p>
-          <a href="/contact/" onclick="event.preventDefault();navTo('contact')" style="display:inline-block;margin-top:12px;color:var(--gold-dk);font-size:0.88rem;font-weight:600;">Book Deep Tissue →</a>
-        </div>
-      </article>
-
-      <article style="border:1px solid var(--border);border-radius:12px;overflow:hidden;background:#fff;">
-        <div style="padding:20px;">
-          <span style="font-size:11px;color:var(--gold-dk);font-weight:600;text-transform:uppercase;letter-spacing:.06em;">Potli Massage</span>
-          <h3 style="margin:8px 0 10px;font-size:1.05rem;color:var(--green);">Potli Massage: Best Ayurvedic Therapy for Body Pain</h3>
-          <p style="font-size:0.87rem;color:var(--text2);line-height:1.6;">Ayurvedic Potli massage uses heated herbal boluses to penetrate deep into joints and muscles. Excellent for arthritis, chronic joint pain, body stiffness and post-workout recovery. Potli Massage in Kothrud at ₹2,999 (90 mins).</p>
-          <a href="/contact/" onclick="event.preventDefault();navTo('contact')" style="display:inline-block;margin-top:12px;color:var(--gold-dk);font-size:0.88rem;font-weight:600;">Book Potli →</a>
-        </div>
-      </article>
-
-      <article style="border:1px solid var(--border);border-radius:12px;overflow:hidden;background:#fff;">
-        <div style="padding:20px;">
-          <span style="font-size:11px;color:var(--gold-dk);font-weight:600;text-transform:uppercase;letter-spacing:.06em;">Foot Massage</span>
-          <h3 style="margin:8px 0 10px;font-size:1.05rem;color:var(--green);">Foot Massage Benefits for Tired Legs and Stress</h3>
-          <p style="font-size:0.87rem;color:var(--text2);line-height:1.6;">Foot massage (reflexology) stimulates pressure points connected to all body organs. Benefits: tired leg relief, improved circulation, better sleep, reduced headaches. Foot massage near Karve Road Kothrud at ₹499 (30 mins).</p>
-          <a href="/contact/" onclick="event.preventDefault();navTo('contact')" style="display:inline-block;margin-top:12px;color:var(--gold-dk);font-size:0.88rem;font-weight:600;">Book Foot Massage →</a>
-        </div>
-      </article>
-
-      <article style="border:1px solid var(--border);border-radius:12px;overflow:hidden;background:#fff;">
-        <div style="padding:20px;">
-          <span style="font-size:11px;color:var(--gold-dk);font-weight:600;text-transform:uppercase;letter-spacing:.06em;">Head Massage</span>
-          <h3 style="margin:8px 0 10px;font-size:1.05rem;color:var(--green);">Head Massage Benefits for Stress, Sleep &amp; Relaxation</h3>
-          <p style="font-size:0.87rem;color:var(--text2);line-height:1.6;">Head massage improves blood circulation to the scalp, reduces tension headaches, promotes hair growth and provides instant relaxation. Head massage in Kothrud at ₹499 (20 mins). Great for IT professionals and office workers.</p>
-          <a href="/contact/" onclick="event.preventDefault();navTo('contact')" style="display:inline-block;margin-top:12px;color:var(--gold-dk);font-size:0.88rem;font-weight:600;">Book Head Massage →</a>
-        </div>
-      </article>
-
-      <article style="border:1px solid var(--border);border-radius:12px;overflow:hidden;background:#fff;">
-        <div style="padding:20px;">
-          <span style="font-size:11px;color:var(--gold-dk);font-weight:600;text-transform:uppercase;letter-spacing:.06em;">Sesame Oil Massage</span>
-          <h3 style="margin:8px 0 10px;font-size:1.05rem;color:var(--green);">Sesame Oil (Til Tel) Massage Benefits in Ayurveda</h3>
-          <p style="font-size:0.87rem;color:var(--text2);line-height:1.6;">Sesame oil penetrates all 7 layers of skin, nourishes joints and reduces Vata dosha imbalances. Til Tel massage at Mauli Spa Kothrud ₹1,499 (60 mins) — traditional ayurvedic oil massage Pune.</p>
-          <a href="/contact/" onclick="event.preventDefault();navTo('contact')" style="display:inline-block;margin-top:12px;color:var(--gold-dk);font-size:0.88rem;font-weight:600;">Book Til Tel →</a>
-        </div>
-      </article>
-
-      <article style="border:1px solid var(--border);border-radius:12px;overflow:hidden;background:#fff;">
-        <div style="padding:20px;">
-          <span style="font-size:11px;color:var(--gold-dk);font-weight:600;text-transform:uppercase;letter-spacing:.06em;">Best for Back Pain</span>
-          <h3 style="margin:8px 0 10px;font-size:1.05rem;color:var(--green);">Which Massage Is Best for Back Pain in Kothrud?</h3>
-          <p style="font-size:0.87rem;color:var(--text2);line-height:1.6;">(1) Back Pain Massage ₹999 — 30-min targeted relief. (2) Deep Tissue ₹2,199 — chronic pain. (3) Potli ₹2,999 — joint-related back pain. (4) Medicinal Oil ₹2,499 — disc or nerve issues. Consult our therapist at Mauli Spa Karve Road.</p>
-          <a href="/contact/" onclick="event.preventDefault();navTo('contact')" style="display:inline-block;margin-top:12px;color:var(--gold-dk);font-size:0.88rem;font-weight:600;">Book Now →</a>
-        </div>
-      </article>
-
-    </div><!-- end #blogEn -->
-
-    <!-- ══════════════════════════════════════════════
-         HINDI ARTICLES
-    ══════════════════════════════════════════════ -->
-    <div id="blogHi" style="display:none;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;">
-
-      <article style="border:1px solid var(--border);border-radius:12px;overflow:hidden;background:#fff;">
-        <div style="padding:20px;">
-          <span style="font-size:11px;color:var(--gold-dk);font-weight:600;text-transform:uppercase;letter-spacing:.06em;">शिरोधारा के फायदे</span>
-          <h3 style="margin:8px 0 10px;font-size:1.05rem;color:var(--green);">शिरोधारा आयुर्वेदिक मसाज — फायदे और पूरी जानकारी</h3>
-          <p style="font-size:0.87rem;color:var(--text2);line-height:1.6;">शिरोधारा एक प्राचीन आयुर्वेदिक उपचार है जिसमें गर्म औषधीय तेल माथे पर निरंतर धारा में डाला जाता है। यह तनाव, माइग्रेन, अनिद्रा और चिंता को दूर करता है। Mauli Spa Kothrud में नियमित शिरोधारा Vata और Pitta दोष को संतुलित करती है, मानसिक स्पष्टता बढ़ाती है और गहरी नींद देती है। IT professionals और उच्च तनाव वाले लोगों के लिए सबसे उपयुक्त।</p>
-          <a href="/contact/" onclick="event.preventDefault();navTo('contact')" style="display:inline-block;margin-top:12px;color:var(--gold-dk);font-size:0.88rem;font-weight:600;">शिरोधारा बुक करें →</a>
-        </div>
-      </article>
-
-      <article style="border:1px solid var(--border);border-radius:12px;overflow:hidden;background:#fff;">
-        <div style="padding:20px;">
-          <span style="font-size:11px;color:var(--gold-dk);font-weight:600;text-transform:uppercase;letter-spacing:.06em;">अभ्यंग मसाज के फायदे</span>
-          <h3 style="margin:8px 0 10px;font-size:1.05rem;color:var(--green);">अभ्यंग आयुर्वेदिक मसाज — पूरे शरीर की उपचार चिकित्सा</h3>
-          <p style="font-size:0.87rem;color:var(--text2);line-height:1.6;">अभ्यंग पारंपरिक आयुर्वेदिक पूर्ण शरीर तेल मसाज है जो गर्म औषधीय तेलों से लंबी लयबद्ध स्ट्रोक के साथ की जाती है। यह त्वचा की 7 परतों को पोषण देती है, रक्त संचार सुधारती है, विषाक्त पदार्थ निकालती है और मांसपेशियों को मजबूत करती है। Mauli Spa Kothrud में नियमित अभ्यंग उम्र बढ़ने को धीमा करता है और रोग प्रतिरोधक क्षमता बढ़ाता है।</p>
-          <a href="/contact/" onclick="event.preventDefault();navTo('contact')" style="display:inline-block;margin-top:12px;color:var(--gold-dk);font-size:0.88rem;font-weight:600;">अभ्यंग बुक करें →</a>
-        </div>
-      </article>
-
-      <article style="border:1px solid var(--border);border-radius:12px;overflow:hidden;background:#fff;">
-        <div style="padding:20px;">
-          <span style="font-size:11px;color:var(--gold-dk);font-weight:600;text-transform:uppercase;letter-spacing:.06em;">महिला स्वास्थ्य — गर्भावस्था</span>
-          <h3 style="margin:8px 0 10px;font-size:1.05rem;color:var(--green);">गर्भावस्था में मसाज के फायदे — सुरक्षित आयुर्वेदिक देखभाल</h3>
-          <p style="font-size:0.87rem;color:var(--text2);line-height:1.6;">हल्की आयुर्वेदिक गर्भावस्था मसाज पीठ दर्द, सूजे पैर, तनाव और चिंता को कम करती है। यह बच्चे तक रक्त प्रवाह सुधारती है, पानी की सूजन कम करती है और कूल्हे दर्द से राहत देती है। प्रसव के बाद मसाज शरीर को तेजी से ठीक करती है, प्रसवोत्तर अवसाद कम करती है और हार्मोनल संतुलन में मदद करती है। बुकिंग से पहले अपने डॉक्टर से जरूर परामर्श करें।</p>
-          <a href="/contact/" onclick="event.preventDefault();navTo('contact')" style="display:inline-block;margin-top:12px;color:var(--gold-dk);font-size:0.88rem;font-weight:600;">अभी बुक करें →</a>
-        </div>
-      </article>
-
-      <article style="border:1px solid var(--border);border-radius:12px;overflow:hidden;background:#fff;">
-        <div style="padding:20px;">
-          <span style="font-size:11px;color:var(--gold-dk);font-weight:600;text-transform:uppercase;letter-spacing:.06em;">महिला स्वास्थ्य — PCOD / फाइब्रॉइड</span>
-          <h3 style="margin:8px 0 10px;font-size:1.05rem;color:var(--green);">PCOD, गर्भाशय फाइब्रॉइड और योनि देखभाल में मसाज की मदद</h3>
-          <p style="font-size:0.87rem;color:var(--text2);line-height:1.6;">आयुर्वेदिक पेट मसाज और औषधीय तेल चिकित्सा PCOD में सूजन कम करती है, हार्मोन संतुलित करती है और प्रजनन अंगों में रक्त प्रवाह सुधारती है। गर्भाशय फाइब्रॉइड में नियमित मसाज दर्द, पेट फूलना और भारी मासिक धर्म कम करती है। योनि देखभाल थेरेपी सूखापन और असुविधा में मदद करती है। स्तन देखभाल मसाज लसीका जल निकासी सुधारती है। Mauli Spa Kothrud में महिला थेरेपिस्ट से परामर्श लें।</p>
-          <a href="/contact/" onclick="event.preventDefault();navTo('contact')" style="display:inline-block;margin-top:12px;color:var(--gold-dk);font-size:0.88rem;font-weight:600;">महिला थेरेपिस्ट से मिलें →</a>
-        </div>
-      </article>
-
-      <article style="border:1px solid var(--border);border-radius:12px;overflow:hidden;background:#fff;">
-        <div style="padding:20px;">
-          <span style="font-size:11px;color:var(--gold-dk);font-weight:600;text-transform:uppercase;letter-spacing:.06em;">नींद में फायदे</span>
-          <h3 style="margin:8px 0 10px;font-size:1.05rem;color:var(--green);">आयुर्वेदिक मसाज नींद कैसे सुधारती है</h3>
-          <p style="font-size:0.87rem;color:var(--text2);line-height:1.6;">मसाज सेरोटोनिन और मेलाटोनिन हार्मोन का स्राव बढ़ाती है जो गहरी नींद के लिए जरूरी हैं। यह अतिसक्रिय तंत्रिका तंत्र को शांत करती है, कोर्टिसोल कम करती है और मांसपेशियों को ढीला करती है। हेड मसाज, शिरोधारा और तिल तेल मसाज अनिद्रा के लिए सबसे प्रभावी हैं। Mauli Spa Kothrud में नियमित मसाज से आप तेजी से सोएंगे और तरोताजा उठेंगे।</p>
-          <a href="/contact/" onclick="event.preventDefault();navTo('contact')" style="display:inline-block;margin-top:12px;color:var(--gold-dk);font-size:0.88rem;font-weight:600;">बेहतर नींद के लिए बुक करें →</a>
-        </div>
-      </article>
-
-      <article style="border:1px solid var(--border);border-radius:12px;overflow:hidden;background:#fff;">
-        <div style="padding:20px;">
-          <span style="font-size:11px;color:var(--gold-dk);font-weight:600;text-transform:uppercase;letter-spacing:.06em;">त्वचा के फायदे</span>
-          <h3 style="margin:8px 0 10px;font-size:1.05rem;color:var(--green);">त्वचा की चमक और एंटी-एजिंग के लिए आयुर्वेदिक मसाज</h3>
-          <p style="font-size:0.87rem;color:var(--text2);line-height:1.6;">आयुर्वेदिक तेल त्वचा की 7 परतों को गहरा पोषण देते हैं। नियमित मसाज मृत त्वचा कोशिकाएं हटाती है, कोलेजन उत्पादन बढ़ाती है और त्वचा की लोच में सुधार करती है। Mauli Spa Kothrud में एलोवेरा जेल, क्रीम और औषधीय तेल मसाज डार्क स्पॉट, रूखापन और बेजान त्वचा दूर करते हैं। 2–3 सत्रों में दिखाई देने वाला सुधार होता है।</p>
-          <a href="/contact/" onclick="event.preventDefault();navTo('contact')" style="display:inline-block;margin-top:12px;color:var(--gold-dk);font-size:0.88rem;font-weight:600;">त्वचा की चमक के लिए बुक करें →</a>
-        </div>
-      </article>
-
-      <article style="border:1px solid var(--border);border-radius:12px;overflow:hidden;background:#fff;">
-        <div style="padding:20px;">
-          <span style="font-size:11px;color:var(--gold-dk);font-weight:600;text-transform:uppercase;letter-spacing:.06em;">रक्त संचार</span>
-          <h3 style="margin:8px 0 10px;font-size:1.05rem;color:var(--green);">बेहतर रक्त प्रवाह के लिए मसाज कैसे मदद करती है</h3>
-          <p style="font-size:0.87rem;color:var(--text2);line-height:1.6;">मसाज रक्त वाहिकाओं को फैलाती है और पूरे शरीर में रक्त संचार सुधारती है। बेहतर रक्त प्रवाह से मांसपेशियों और त्वचा को अधिक ऑक्सीजन और पोषक तत्व मिलते हैं। डीप टिशू मसाज, फुट रिफ्लेक्सोलॉजी और अभ्यंग वैरिकोज नसें, सुन्नपन और थकान में विशेष रूप से प्रभावी हैं। Mauli Spa Kothrud में नियमित मसाज रक्तचाप भी कम करती है।</p>
-          <a href="/contact/" onclick="event.preventDefault();navTo('contact')" style="display:inline-block;margin-top:12px;color:var(--gold-dk);font-size:0.88rem;font-weight:600;">अभी बुक करें →</a>
-        </div>
-      </article>
-
-      <article style="border:1px solid var(--border);border-radius:12px;overflow:hidden;background:#fff;">
-        <div style="padding:20px;">
-          <span style="font-size:11px;color:var(--gold-dk);font-weight:600;text-transform:uppercase;letter-spacing:.06em;">तनाव और चिंता राहत</span>
-          <h3 style="margin:8px 0 10px;font-size:1.05rem;color:var(--green);">मसाज तनाव, चिंता और अवसाद में कैसे मदद करती है</h3>
-          <p style="font-size:0.87rem;color:var(--text2);line-height:1.6;">मसाज एक सत्र में कोर्टिसोल (तनाव हार्मोन) को 30% तक कम करती है। यह पैरासिम्पेथेटिक तंत्रिका तंत्र को सक्रिय करती है और एंडोर्फिन, सेरोटोनिन और डोपामिन छोड़ती है। शिरोधारा और हेड मसाज चिंता के लिए सबसे प्रभावी हैं। Mauli Spa Kothrud में नियमित मसाज अत्यधिक सोचने, भावनात्मक थकान और बर्नआउट को कम करती है।</p>
-          <a href="/contact/" onclick="event.preventDefault();navTo('contact')" style="display:inline-block;margin-top:12px;color:var(--gold-dk);font-size:0.88rem;font-weight:600;">तनाव राहत के लिए बुक करें →</a>
-        </div>
-      </article>
-
-      <article style="border:1px solid var(--border);border-radius:12px;overflow:hidden;background:#fff;">
-        <div style="padding:20px;">
-          <span style="font-size:11px;color:var(--gold-dk);font-weight:600;text-transform:uppercase;letter-spacing:.06em;">पीठ दर्द के लिए सबसे अच्छी मसाज</span>
-          <h3 style="margin:8px 0 10px;font-size:1.05rem;color:var(--green);">कोथरूड में पीठ दर्द के लिए कौन सी मसाज सबसे अच्छी है?</h3>
-          <p style="font-size:0.87rem;color:var(--text2);line-height:1.6;">(1) बैक पेन मसाज ₹999 — 30 मिनट में तुरंत राहत। (2) डीप टिशू ₹2,199 — पुराने दर्द के लिए। (3) पोटली ₹2,999 — जोड़ों से संबंधित पीठ दर्द। (4) औषधीय तेल ₹2,499 — डिस्क या नस की समस्याओं के लिए। Mauli Spa Karve Road पर हमारे थेरेपिस्ट से परामर्श करें।</p>
-          <a href="/contact/" onclick="event.preventDefault();navTo('contact')" style="display:inline-block;margin-top:12px;color:var(--gold-dk);font-size:0.88rem;font-weight:600;">अभी बुक करें →</a>
-        </div>
-      </article>
-
-    </div><!-- end #blogHi -->
-
-    <!-- ══════════════════════════════════════════════
-         MARATHI ARTICLES
-    ══════════════════════════════════════════════ -->
-    <div id="blogMr" style="display:none;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;">
-
-      <article style="border:1px solid var(--border);border-radius:12px;overflow:hidden;background:#fff;">
-        <div style="padding:20px;">
-          <span style="font-size:11px;color:var(--gold-dk);font-weight:600;text-transform:uppercase;letter-spacing:.06em;">शिरोधारा फायदे</span>
-          <h3 style="margin:8px 0 10px;font-size:1.05rem;color:var(--green);">शिरोधारा आयुर्वेदिक मसाज — फायदे आणि संपूर्ण माहिती</h3>
-          <p style="font-size:0.87rem;color:var(--text2);line-height:1.6;">शिरोधारा ही एक प्राचीन आयुर्वेदिक चिकित्सा आहे ज्यामध्ये गरम औषधीय तेल कपाळावर सतत धारेत ओतले जाते. हे तीव्र ताण, मायग्रेन, निद्रानाश आणि चिंता दूर करते. Mauli Spa Kothrud मध्ये नियमित शिरोधारा Vata आणि Pitta दोष संतुलित करते, मानसिक स्पष्टता वाढवते आणि गाढ झोप देते. IT व्यावसायिक आणि उच्च तणावग्रस्त लोकांसाठी सर्वोत्तम.</p>
-          <a href="/contact/" onclick="event.preventDefault();navTo('contact')" style="display:inline-block;margin-top:12px;color:var(--gold-dk);font-size:0.88rem;font-weight:600;">शिरोधारा बुक करा →</a>
-        </div>
-      </article>
-
-      <article style="border:1px solid var(--border);border-radius:12px;overflow:hidden;background:#fff;">
-        <div style="padding:20px;">
-          <span style="font-size:11px;color:var(--gold-dk);font-weight:600;text-transform:uppercase;letter-spacing:.06em;">अभ्यंग मसाज फायदे</span>
-          <h3 style="margin:8px 0 10px;font-size:1.05rem;color:var(--green);">अभ्यंग आयुर्वेदिक मसाज — संपूर्ण शरीर उपचार चिकित्सा</h3>
-          <p style="font-size:0.87rem;color:var(--text2);line-height:1.6;">अभ्यंग ही पारंपारिक आयुर्वेदिक पूर्ण शरीर तेल मसाज आहे जी गरम औषधीय तेलांनी दीर्घ लयबद्ध स्ट्रोकने केली जाते. ती त्वचेच्या 7 थरांना पोषण देते, रक्त परिसंचरण सुधारते, विषारी पदार्थ काढते आणि स्नायू मजबूत करते. Mauli Spa Kothrud मध्ये नियमित अभ्यंग वृद्धत्व मंदावते आणि रोगप्रतिकार शक्ती वाढवते.</p>
-          <a href="/contact/" onclick="event.preventDefault();navTo('contact')" style="display:inline-block;margin-top:12px;color:var(--gold-dk);font-size:0.88rem;font-weight:600;">अभ्यंग बुक करा →</a>
-        </div>
-      </article>
-
-      <article style="border:1px solid var(--border);border-radius:12px;overflow:hidden;background:#fff;">
-        <div style="padding:20px;">
-          <span style="font-size:11px;color:var(--gold-dk);font-weight:600;text-transform:uppercase;letter-spacing:.06em;">महिला आरोग्य — गर्भारपण</span>
-          <h3 style="margin:8px 0 10px;font-size:1.05rem;color:var(--green);">गर्भारपणात मसाजचे फायदे — सुरक्षित आयुर्वेदिक काळजी</h3>
-          <p style="font-size:0.87rem;color:var(--text2);line-height:1.6;">सौम्य आयुर्वेदिक गर्भारपण मसाज पाठदुखी, सुजलेले पाय, ताण आणि चिंता कमी करते. बाळापर्यंत रक्त प्रवाह सुधारते, पाणी धारणा कमी करते आणि नितंब वेदनेपासून आराम देते. प्रसूतीनंतर मसाज शरीर जलद बरे करते, प्रसूतीनंतर नैराश्य कमी करते आणि हार्मोनल संतुलनास मदत करते. बुकिंग करण्यापूर्वी आपल्या डॉक्टरांचा सल्ला घ्या.</p>
-          <a href="/contact/" onclick="event.preventDefault();navTo('contact')" style="display:inline-block;margin-top:12px;color:var(--gold-dk);font-size:0.88rem;font-weight:600;">आता बुक करा →</a>
-        </div>
-      </article>
-
-      <article style="border:1px solid var(--border);border-radius:12px;overflow:hidden;background:#fff;">
-        <div style="padding:20px;">
-          <span style="font-size:11px;color:var(--gold-dk);font-weight:600;text-transform:uppercase;letter-spacing:.06em;">महिला आरोग्य — PCOD / फायब्रॉइड</span>
-          <h3 style="margin:8px 0 10px;font-size:1.05rem;color:var(--green);">PCOD, गर्भाशय फायब्रॉइड आणि योनी काळजीसाठी मसाज</h3>
-          <p style="font-size:0.87rem;color:var(--text2);line-height:1.6;">आयुर्वेदिक उदर मसाज आणि औषधीय तेल चिकित्सा PCOD मध्ये जळजळ कमी करते, हार्मोन्स संतुलित करते आणि प्रजनन अवयवांमध्ये रक्त प्रवाह सुधारते. गर्भाशय फायब्रॉइडमध्ये नियमित मसाज वेदना, फुगणे आणि जड मासिक पाळी कमी करते. योनी देखभाल थेरपी कोरडेपणा आणि अस्वस्थतेत मदत करते. स्तन काळजी मसाज लसीका निचरा सुधारते. Mauli Spa मध्ये महिला थेरपिस्टशी संपर्क साधा.</p>
-          <a href="/contact/" onclick="event.preventDefault();navTo('contact')" style="display:inline-block;margin-top:12px;color:var(--gold-dk);font-size:0.88rem;font-weight:600;">महिला थेरपिस्ट →</a>
-        </div>
-      </article>
-
-      <article style="border:1px solid var(--border);border-radius:12px;overflow:hidden;background:#fff;">
-        <div style="padding:20px;">
-          <span style="font-size:11px;color:var(--gold-dk);font-weight:600;text-transform:uppercase;letter-spacing:.06em;">झोपेचे फायदे</span>
-          <h3 style="margin:8px 0 10px;font-size:1.05rem;color:var(--green);">आयुर्वेदिक मसाज झोप कशी सुधारते</h3>
-          <p style="font-size:0.87rem;color:var(--text2);line-height:1.6;">मसाज सेरोटोनिन आणि मेलाटोनिन हार्मोन्स सोडते जे गाढ झोपेसाठी आवश्यक आहेत. ती अतिसक्रिय मज्जासंस्था शांत करते, कोर्टिसोल कमी करते आणि स्नायू सैल करते. हेड मसाज, शिरोधारा आणि तीळ तेल मसाज निद्रानाशासाठी सर्वात प्रभावी आहेत. Mauli Spa Kothrud मध्ये नियमित मसाजने तुम्ही लवकर झोपाल आणि ताजेतवाने उठाल.</p>
-          <a href="/contact/" onclick="event.preventDefault();navTo('contact')" style="display:inline-block;margin-top:12px;color:var(--gold-dk);font-size:0.88rem;font-weight:600;">चांगल्या झोपेसाठी बुक करा →</a>
-        </div>
-      </article>
-
-      <article style="border:1px solid var(--border);border-radius:12px;overflow:hidden;background:#fff;">
-        <div style="padding:20px;">
-          <span style="font-size:11px;color:var(--gold-dk);font-weight:600;text-transform:uppercase;letter-spacing:.06em;">त्वचेचे फायदे</span>
-          <h3 style="margin:8px 0 10px;font-size:1.05rem;color:var(--green);">त्वचेची चमक आणि वृद्धत्व विरोधी आयुर्वेदिक मसाज</h3>
-          <p style="font-size:0.87rem;color:var(--text2);line-height:1.6;">आयुर्वेदिक औषधीय तेले त्वचेच्या 7 थरांना खोल पोषण देतात. नियमित मसाज मृत त्वचा पेशी काढते, कोलेजन उत्पादन वाढवते आणि त्वचेची लवचिकता सुधारते. Mauli Spa Kothrud मध्ये एलोव्हेरा जेल, क्रीम आणि औषधीय तेल मसाज गडद डाग, कोरडेपणा आणि निस्तेज त्वचा दूर करते. 2–3 सत्रांमध्ये दृश्यमान सुधारणा होते.</p>
-          <a href="/contact/" onclick="event.preventDefault();navTo('contact')" style="display:inline-block;margin-top:12px;color:var(--gold-dk);font-size:0.88rem;font-weight:600;">त्वचेच्या चमकसाठी बुक करा →</a>
-        </div>
-      </article>
-
-      <article style="border:1px solid var(--border);border-radius:12px;overflow:hidden;background:#fff;">
-        <div style="padding:20px;">
-          <span style="font-size:11px;color:var(--gold-dk);font-weight:600;text-transform:uppercase;letter-spacing:.06em;">रक्ताभिसरण</span>
-          <h3 style="margin:8px 0 10px;font-size:1.05rem;color:var(--green);">चांगल्या रक्त प्रवाहासाठी मसाज कशी मदत करते</h3>
-          <p style="font-size:0.87rem;color:var(--text2);line-height:1.6;">मसाज रक्तवाहिन्या रुंदावते आणि संपूर्ण शरीरात रक्त परिसंचरण सुधारते. चांगल्या रक्त प्रवाहामुळे स्नायू, अवयव आणि त्वचेला अधिक ऑक्सिजन आणि पोषक तत्त्वे मिळतात. डीप टिश्यू मसाज, फूट रिफ्लेक्सोलॉजी आणि अभ्यंग वैरिकोज नसा, सुन्नपणा आणि थकव्यात विशेष उपयुक्त आहेत. Mauli Spa Kothrud मध्ये नियमित मसाज रक्तदाब देखील कमी करते.</p>
-          <a href="/contact/" onclick="event.preventDefault();navTo('contact')" style="display:inline-block;margin-top:12px;color:var(--gold-dk);font-size:0.88rem;font-weight:600;">आता बुक करा →</a>
-        </div>
-      </article>
-
-      <article style="border:1px solid var(--border);border-radius:12px;overflow:hidden;background:#fff;">
-        <div style="padding:20px;">
-          <span style="font-size:11px;color:var(--gold-dk);font-weight:600;text-transform:uppercase;letter-spacing:.06em;">ताण आणि चिंता निवारण</span>
-          <h3 style="margin:8px 0 10px;font-size:1.05rem;color:var(--green);">मसाज ताण, चिंता आणि नैराश्यात कशी मदत करते</h3>
-          <p style="font-size:0.87rem;color:var(--text2);line-height:1.6;">मसाज एका सत्रात कोर्टिसोल (ताण हार्मोन) 30% पर्यंत कमी करते. ती पॅरासिम्पेथेटिक मज्जासंस्था सक्रिय करते आणि एंडोर्फिन, सेरोटोनिन आणि डोपामिन सोडते. शिरोधारा आणि हेड मसाज चिंतेसाठी सर्वात प्रभावी आहेत. Mauli Spa Kothrud मध्ये नियमित मसाज अतिविचार, भावनिक थकवा आणि बर्नआउट कमी करते.</p>
-          <a href="/contact/" onclick="event.preventDefault();navTo('contact')" style="display:inline-block;margin-top:12px;color:var(--gold-dk);font-size:0.88rem;font-weight:600;">ताण निवारणासाठी बुक करा →</a>
-        </div>
-      </article>
-
-      <article style="border:1px solid var(--border);border-radius:12px;overflow:hidden;background:#fff;">
-        <div style="padding:20px;">
-          <span style="font-size:11px;color:var(--gold-dk);font-weight:600;text-transform:uppercase;letter-spacing:.06em;">पाठदुखीसाठी सर्वोत्तम मसाज</span>
-          <h3 style="margin:8px 0 10px;font-size:1.05rem;color:var(--green);">कोथरूडमध्ये पाठदुखीसाठी कोणती मसाज सर्वोत्तम आहे?</h3>
-          <p style="font-size:0.87rem;color:var(--text2);line-height:1.6;">(1) बॅक पेन मसाज ₹999 — 30 मिनिटांत त्वरित आराम. (2) डीप टिश्यू ₹2,199 — जुन्या दुखण्यासाठी. (3) पोटली ₹2,999 — सांधे संबंधित पाठदुखीसाठी. (4) औषधी तेल ₹2,499 — डिस्क किंवा नसेच्या समस्यांसाठी. Mauli Spa Karve Road वर आमच्या थेरपिस्टशी सल्लामसलत करा.</p>
-          <a href="/contact/" onclick="event.preventDefault();navTo('contact')" style="display:inline-block;margin-top:12px;color:var(--gold-dk);font-size:0.88rem;font-weight:600;">आता बुक करा →</a>
-        </div>
-      </article>
-
-    </div><!-- end #blogMr -->
-
-    <div style="text-align:center;margin-top:32px;">
-      <a href="/contact/" class="btn-gold" onclick="event.preventDefault();navTo('contact')" data-i18n="blogCTA">Book Any Therapy at Mauli Spa Kothrud →</a>
-    </div>
-  </div>
-
-</section>
-
-<!-- ═══════════════════════════════════════════════════════════════
-     SHOP PAGE
-     Primary KW  : ayurvedic massage oil online pune
-     Supporting  : buy ayurvedic massage oil | herbal massage oil online |
-                   sesame oil for body massage | pain relief massage oil pune
-═══════════════════════════════════════════════════════════════ -->
-<section id="page-shop" class="page"
-  data-page-title="Ayurvedic Massage Oil Online Pune — Buy Herbal Wellness Products | Mauli Spa Shop"
-  data-page-desc="Buy ayurvedic massage oil online Pune. Herbal massage oil, sesame oil for body massage, pain relief massage oil, skin care packs. Shop at shop.maulispa.com."
-  data-page-url="/shop/"
-  aria-label="Shop — Ayurvedic Massage Oil Online Pune">
-
-  <div class="page-banner" style="background-image:url('assets/more/more.webp')">
-    <div class="pb-overlay"></div>
-    <div class="pb-content">
-      <h1>Ayurvedic Massage Oil Online Pune — Herbal Wellness Products</h1>
-      <p>Buy ayurvedic massage oil · Herbal body care · Sesame oil for body massage · Pain relief massage oil</p>
-    </div>
-  </div>
-
-  <div class="container" style="padding:60px 20px;text-align:center;">
-    <h2 class="sec-h2">Shop Ayurvedic Wellness Products — Mauli Spa</h2>
-    <p style="color:var(--text2,#555);font-size:0.95rem;margin-bottom:8px;">
-      Ayurvedic massage oils · Herbal wellness products · Body care packs · Pain relief oils · Skin care · Sesame oil for body massage
-    </p>
-    <p style="color:var(--text2,#555);font-size:0.88rem;margin-bottom:28px;">
-      <strong>Buy ayurvedic massage oil online Pune</strong> — pure herbal formulations used by our certified therapists at Mauli Spa Kothrud.
-    </p>
-    <a href="https://shop.maulispa.com/" target="_blank" rel="noopener" class="btn-gold" style="font-size:1rem;padding:14px 36px;">
-      Visit Shop — shop.maulispa.com →
-    </a>
-    <p style="margin-top:16px;font-size:0.82rem;color:var(--text3,#999);">You will be redirected to shop.maulispa.com</p>
-  </div>
-</section>
-
-<!-- ═══ TERMS ═══ -->
-<section id="page-terms" class="page"
-  data-page-title="Terms & Conditions — Mauli Spa Kothrud Pune"
-  data-page-desc="Terms and conditions for Mauli Spa — Ayurvedic massage center in Kothrud, Karve Road, Pune."
-  data-page-url="/terms/"
-  aria-label="Terms and Conditions">
-  <div class="page-banner" style="background-image:url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1920&h=400&fit=crop')">
-    <div class="pb-overlay"></div>
-    <div class="pb-content"><h1 data-i18n="termsH1">Terms &amp; Conditions</h1></div>
-  </div>
-  <div class="container legal-page" style="padding:60px 20px">
-    <p class="legal-updated" data-i18n="legalUpdated">Last Updated: 1 May 2026 · Version 1.1</p>
-    <div id="termsContent"></div>
-  </div>
-</section>
-
-<!-- ═══ PRIVACY ═══ -->
-<section id="page-privacy" class="page"
-  data-page-title="Privacy Policy — Mauli Spa Kothrud Pune"
-  data-page-desc="Privacy policy for Mauli Spa — Ayurvedic massage center in Kothrud, Karve Road, Pune."
-  data-page-url="/privacy/"
-  aria-label="Privacy Policy">
-  <div class="page-banner" style="background-image:url('https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=1920&h=400&fit=crop')">
-    <div class="pb-overlay"></div>
-    <div class="pb-content"><h1 data-i18n="privacyH1">Privacy Policy</h1></div>
-  </div>
-  <div class="container legal-page" style="padding:60px 20px">
-    <p class="legal-updated" data-i18n="legalUpdated">Last Updated: 1 May 2026 · Version 1.1</p>
-    <div id="privacyContent"></div>
-  </div>
-</section>
 
 </main>
 
-<!-- FOOTER -->
 <footer class="footer">
   <div class="footer-grid container">
     <div class="fc">
@@ -1640,15 +570,15 @@
     <div class="fc">
       <h4 data-i18n="quickLinks">Quick Links — Mauli Spa Kothrud</h4>
       <ul class="footer-links">
-        <li><a href="/"            onclick="event.preventDefault();navTo('home')"       data-i18n="navHome">Home — Best Spa Kothrud</a></li>
-        <li><a href="/therapies/"  onclick="event.preventDefault();navTo('therapies')"  data-i18n="navTherapies">Ayurvedic Massage Therapies</a></li>
-        <li><a href="/gallery/"    onclick="event.preventDefault();navTo('gallery')"    data-i18n="navGallery">Gallery — Hygienic Spa Kothrud</a></li>
-        <li><a href="/membership/" onclick="event.preventDefault();navTo('membership')" data-i18n="navMembership">Membership Packages</a></li>
-        <li><a href="/about/"      onclick="event.preventDefault();navTo('about')"      data-i18n="navAbout">About — Mauli Ayurvedic</a></li>
-        <li><a href="/contact/"    onclick="event.preventDefault();navTo('contact')"    data-i18n="navContact">Book Massage Appointment</a></li>
-        <li><a href="/more/"       onclick="event.preventDefault();navTo('more')"       data-i18n="navMore">Massage Benefits &amp; FAQ</a></li>
-        <li><a href="/blog/"       onclick="event.preventDefault();navTo('blog')">Blog — Health Tips</a></li>
-        <li><a href="https://shop.maulispa.com/" target="_blank" rel="noopener">Shop — Ayurvedic Oils</a></li>
+        <li><a href="/"            onclick="event.preventDefault();window.location.href='/'"       data-i18n="navHome">Home — Best Spa Kothrud</a></li>
+        <li><a href="/therapies.html"  onclick="event.preventDefault();window.location.href='/therapies.html'"  data-i18n="navTherapies">Ayurvedic Massage Therapies</a></li>
+        <li><a href="/gallery.html"    onclick="event.preventDefault();window.location.href='/gallery.html'"    data-i18n="navGallery">Gallery — Hygienic Spa Kothrud</a></li>
+        <li><a href="/membership.html" onclick="event.preventDefault();window.location.href='/membership.html'" data-i18n="navMembership">Membership Packages</a></li>
+        <li><a href="/about.html"      onclick="event.preventDefault();window.location.href='/about.html'"      data-i18n="navAbout">About — Mauli Ayurvedic</a></li>
+        <li><a href="/contact.html"    onclick="event.preventDefault();window.location.href='/contact.html'"    data-i18n="navContact">Book Massage Appointment</a></li>
+        <li><a href="/more.html"       onclick="event.preventDefault();window.location.href='/more.html'"       data-i18n="navMore">Massage Benefits &amp; FAQ</a></li>
+        <li><a href="/blog.html"       onclick="event.preventDefault();window.location.href='/blog.html'"       data-i18n="navBlog">Blog — Health Tips</a></li>
+        <li><a href="https://shop.maulispa.com/" target="_blank" rel="noopener"         data-i18n="navShop">Shop — Ayurvedic Oils</a></li>
       </ul>
     </div>
     <div class="fc">
@@ -1686,8 +616,8 @@
     <div class="container footer-bottom-inner">
       <p>© 2026 Mauli Ayurvedic Massage Therapy — Best Spa in Kothrud Pune, Karve Road. All Rights Reserved. Designed and managed by <a href="https://wa.me/+919205806024" target="_blank" rel="noopener">Tarun Kumar</a> <a href="https://instagram.com/tarunsgn" target="_blank" rel="noopener" style="margin-left:4px"><i class="fab fa-instagram"></i></a></p>
       <div class="legal-footer-links">
-        <a href="/terms/"   onclick="event.preventDefault();openLegalPopup('terms')"   data-i18n="navTerms">Terms &amp; Conditions</a>
-        <a href="/privacy/" onclick="event.preventDefault();openLegalPopup('privacy')" data-i18n="navPrivacy">Privacy Policy</a>
+        <a href="/terms.html"   onclick="event.preventDefault();openLegalPopup('terms')"   data-i18n="navTerms">Terms &amp; Conditions</a>
+        <a href="/privacy.html" onclick="event.preventDefault();openLegalPopup('privacy')" data-i18n="navPrivacy">Privacy Policy</a>
       </div>
     </div>
   </div>
@@ -1885,6 +815,9 @@
 <script src="script.js"></script>
 <!-- FIX PATCH: updateCalc override — must load AFTER script.js -->
 <script src="script_patch.js"></script>
+
+</body>
+</html>
 
 </body>
 </html>

@@ -842,35 +842,30 @@ var PAGE_URLS = {
   more:       '/more.html',
   blog:       '/blog.html',
   shop:       'https://shop.maulispa.com/',
-  terms:      null, // popup only
-  privacy:    null, // popup only
+  terms:      null,
+  privacy:    null
 };
 
 function navTo(page){
-  // Legal pages open as popups only
   if(page==='terms'){openLegalPopup('terms');return;}
   if(page==='privacy'){openLegalPopup('privacy');return;}
 
-  // Close mobile nav first
-  var nav=document.getElementById('mainNav');var hb=document.getElementById('hamburger');
+  // Close mobile nav
+  var nav=document.getElementById('mainNav');
+  var hb=document.getElementById('hamburger');
   if(nav) nav.classList.remove('mobile-open');
-  if(hb) hb.classList.remove('open');
+  if(hb)  hb.classList.remove('open');
 
-  // Navigate to the page URL
-  var url = PAGE_URLS[page];
-  if(!url) url = '/';
+  var url = PAGE_URLS[page] || '/';
 
-  // External link (shop)
-  if(url.startsWith('http') && !url.includes('maulispa.com/')) {
-    window.open(url, '_blank');
-    return;
-  }
+  // Shop — external
+  if(page==='shop'){window.open(url,'_blank');return;}
 
-  // Check if already on that page — if yes just scroll top
-  var currentPath = window.location.pathname;
-  var targetFile  = url === '/' ? '/' : url;
-  if(currentPath === targetFile || (currentPath === '/' && targetFile === '/')) {
-    try{window.scrollTo({top:0,behavior:'smooth'});}catch(e){window.scrollTo(0,0);}
+  // Already on this page — scroll to top
+  var p = window.location.pathname.replace(/\.html$/,'').replace(/\/$/,'') || '/';
+  var t = url.replace(/\.html$/,'').replace(/\/$/,'') || '/';
+  if(p === t){
+    window.scrollTo({top:0,behavior:'smooth'});
     return;
   }
 

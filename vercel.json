@@ -1,14 +1,19 @@
 {
-  "cleanUrls": true,
-  "trailingSlash": false,
-  "routes": [
-    { "src": "/therapies",  "dest": "/therapies.html" },
-    { "src": "/gallery",    "dest": "/gallery.html" },
-    { "src": "/membership", "dest": "/membership.html" },
-    { "src": "/about",      "dest": "/about.html" },
-    { "src": "/contact",    "dest": "/contact.html" },
-    { "src": "/more",       "dest": "/more.html" },
-    { "src": "/blog",       "dest": "/blog.html" },
-    { "src": "/(.*)",       "dest": "/$1" }
+  "rewrites": [
+    { "source": "/therapies",  "destination": "/therapies.html" },
+    { "source": "/gallery",    "destination": "/gallery.html" },
+    { "source": "/membership", "destination": "/membership.html" },
+    { "source": "/about",      "destination": "/about.html" },
+    { "source": "/contact",    "destination": "/contact.html" },
+    { "source": "/more",       "destination": "/more.html" },
+    { "source": "/blog",       "destination": "/blog.html" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" }
+      ]
+    }
   ]
 }
